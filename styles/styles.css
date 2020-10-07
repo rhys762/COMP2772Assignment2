@@ -1,0 +1,23 @@
+/*
+    Style rules for the header of the page
+*/
+
+.pageHeader {
+    width: 100%;
+    height: 20%;
+    background-color: #696969;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+/*
+    for the main title
+*/
+.pageHeader h1 {
+    color: #DCDCDC;
+}
+
+body {
+    height: 200%;
+}
