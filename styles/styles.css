@@ -21,3 +21,30 @@
 body {
     height: 200%;
 }
+
+/*
+    search bar rules
+*/
+
+#searchBar input {
+    display: flex;
+    float: left;
+    height: 25px;
+}
+
+/*
+        search field
+*/
+#searchBar input[type="text"] {
+    width: 150px;
+}
+
+/*
+        search button
+*/
+#searchBar input[type="submit"] {
+    background-image: url("../icons/shittySearchIcon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25px;
+}
