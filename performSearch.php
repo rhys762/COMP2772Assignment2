@@ -34,7 +34,17 @@
             {
                 echo "<div class=\"searchResultItem\">";
                 echo "<p class=\"itemName\">" . $row["name"] . "</p>";
-                echo "<p class=\"itemPrice\">$" . $row["price"] . "</p>";
+                //display prices for sale items differently:
+                if($row["specialPrice"])
+                {
+                    echo "<p class=\"worsePrice\">$" . $row["price"] . "</p>";
+                    echo "<p class=\"betterPrice\">$" . $row["specialPrice"] . "</p>";
+                }
+                else
+                {
+                    echo "<p class=\"itemPrice\">$" . $row["price"] . "</p>";
+                }
+                
                 echo "<img class=\"itemImage\" src=\"images/" . $row["imgPath"] . "\">";
                 echo "</div>";
             }

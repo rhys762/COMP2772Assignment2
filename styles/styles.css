@@ -57,5 +57,29 @@ body {
 .searchResultItem {
     border: 1px solid black;
     padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 20%;
+}
+
+#links {
     margin: 5px;
+    list-style: none;
+    display: flex;
+    float: left;
+}
+
+#links li a {
+    color: #DCDCDC;
+    text-decoration: none;
+    margin: 6px;
+}
+
+.worsePrice {
+    text-decoration: line-through;
+}
+
+.betterPrice {
+    color: red;
 }

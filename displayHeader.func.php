@@ -11,4 +11,10 @@
         <input type="text" name="searchValue" placeholder="Search for keywords..">
         <input type="submit" value="">
     </form>
+
+    <ul id="links">
+        <li><a href="home.php">Home</a></li>
+        <li><a href="specials.php">Specials</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
 </div>
