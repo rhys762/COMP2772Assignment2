@@ -13,6 +13,8 @@ CREATE TABLE Products(
 ) AUTO_INCREMENT = 1;
 
 CREATE user IF NOT EXISTS dbadmin@localhost;
-GRANT all privileges ON Practical3.Products TO dbadmin@localhost;
+GRANT all privileges ON ProductsDB.Products TO dbadmin@localhost;
 
-INSERT INTO Products (name, imgPath, price) VALUES('redApple', 'redApple.png', 10.5);
+INSERT INTO Products (name, imgPath, price) VALUES('Red Apple', 'redApple.png', 10.5);
+INSERT INTO Products (name, imgPath, price) VALUES('Green Apple', 'greenApple.png', 22.7);
+INSERT INTO Products (name, imgPath, price) VALUES('Bannana', 'bannana.png', 3.1);
