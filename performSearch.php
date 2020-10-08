@@ -20,7 +20,9 @@
     {
         //for now just check against name
         //% is regex * because why the fuck
-        $sqlquery = "SELECT * FROM `products` where name like '%" . $_POST["searchValue"] . "%'" ;
+        $lowerCaseSearchValue = strtolower($_POST["searchValue"]);
+        $sqlquery = "SELECT * FROM `products` where LOWER(name) like '%" . $lowerCaseSearchValue . "%'" ;
+
 
         //send off the statement to sql
         if($result=mysqli_query($conn, $sqlquery))
