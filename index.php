@@ -7,6 +7,7 @@
 </head>
 
 <body>
+    <?php require_once "dbconn.inc.php"; ?>
     <!-- container at the top of page holding page title,
          search bar, navigation account login etc to be decided --> 
     <div class="pageHeader">
