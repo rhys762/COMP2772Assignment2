@@ -39,5 +39,7 @@
         {
             echo "sql error";
         }
+        //close connection
+        mysqli_close($conn);
     ?>
 </body>

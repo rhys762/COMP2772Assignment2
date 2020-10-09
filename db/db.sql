@@ -13,8 +13,16 @@ CREATE TABLE Products(
     specialPrice float
 ) AUTO_INCREMENT = 1;
 
+CREATE TABLE Accounts(
+    accountName varchar(100) NOT NULL PRIMARY KEY,
+    firstname varchar(40) NOT NULL,
+    lastname varchar(40) NOT NULL,
+    password varchar(40) NOT NULL
+);
+
 CREATE user IF NOT EXISTS dbadmin@localhost;
 GRANT all privileges ON ProductsDB.Products TO dbadmin@localhost;
+GRANT all privileges ON ProductsDB.Accounts TO dbadmin@localhost;
 
 INSERT INTO Products (name, imgPath, price) VALUES('Red Apple', 'redApple.png', 10.5);
 INSERT INTO Products (name, imgPath, price) VALUES('Green Apple', 'greenApple.png', 22.7);
