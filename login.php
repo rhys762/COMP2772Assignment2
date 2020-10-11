@@ -17,24 +17,18 @@
         session_start();
         if(isset($_SESSION['unameTaken']))
         {
-            if($_SESSION['unameTaken'] == 1)
+            if($_SESSION['unameTaken'] == 0)
             {
-                echo "<p id =\"unameTaken\">Username is already taken</p>";
+                echo "<p id =\"accountMade\">Success, please login below</p>";
             }
         }
     ?>
 
-    <form id="createNewAccountForm" action="createAccount.func.php" method="POST">
+    <form id="loginForm" action="" method="POST">
         <label for="username">Username:</label><br>
         <input type="text" name="username" required><br>
-        <label for="firstName">Given Name:</label><br>
-        <input type="text" name="firstname" required><br>
-        <label for="lastName">Family Name:</label><br>
-        <input type="text" name="lastname" required><br>
         <label for="password">Password:</label><br>
         <input type="text" name="password" required><br>
-        <label for="confirmPassword">Confirm Password:</label><br>
-        <input type="text" required><br>
-        <input type="submit" value="Create">
+        <input type="submit" value="Login">
     </form>
 </body>

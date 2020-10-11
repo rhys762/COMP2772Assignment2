@@ -83,3 +83,11 @@ body {
 .betterPrice {
     color: red;
 }
+
+#unameTaken {
+    color: red;
+}
+
+#accountMade {
+    color: green;
+}

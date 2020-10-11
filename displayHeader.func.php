@@ -16,6 +16,6 @@
         <li><a href="home.php">Home</a></li>
         <li><a href="specials.php">Specials</a></li>
         <li><a href="createAccount.php">Create Account</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="login.php">Log In</a></li>
     </ul>
 </div>
