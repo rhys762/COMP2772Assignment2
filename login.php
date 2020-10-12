@@ -24,7 +24,7 @@
         }
     ?>
 
-    <form id="loginForm" action="" method="POST">
+    <form id="loginForm" action="login.func.php" method="POST">
         <label for="username">Username:</label><br>
         <input type="text" name="username" required><br>
         <label for="password">Password:</label><br>

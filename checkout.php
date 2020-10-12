@@ -1,0 +1,7 @@
+<!--
+    Checkout page
+-->
+
+<?php
+
+?>
