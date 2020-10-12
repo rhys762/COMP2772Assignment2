@@ -17,6 +17,8 @@
         //connect to the database
         require_once "dbconn.inc.php";
 
+        require_once "itemDisplay.func.php";
+
         $sqlquery = "SELECT * FROM `products` where specialPrice is not null";
         //send off the statement to sql
         if($result=mysqli_query($conn, $sqlquery))
@@ -25,12 +27,8 @@
             //iterate through the query result
             while($row = mysqli_fetch_assoc($result))
             {
-                echo "<div class=\"searchResultItem\">";
-                echo "<p class=\"itemName\">" . $row["name"] . "</p>";
-                echo "<p class=\"worsePrice\">$" . $row["price"] . "</p>";
-                echo "<p class=\"betterPrice\">$" . $row["specialPrice"] . "</p>";
-                echo "<img class=\"itemImage\" src=\"images/" . $row["imgPath"] . "\">";
-                echo "</div>";
+                //this function is declared in itemDisplay.func.php
+                displayItem($row, $conn);
             }
             //free up result
             mysqli_free_result($result);

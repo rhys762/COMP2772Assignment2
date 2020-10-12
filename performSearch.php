@@ -15,6 +15,8 @@
     //connect to the database
     require_once "dbconn.inc.php";
 
+    require_once "itemDisplay.func.php";
+
     //check the search field was set
     if(isset($_POST["searchValue"]))
     {
@@ -32,21 +34,8 @@
             //iterate through the query result
             while($row = mysqli_fetch_assoc($result))
             {
-                echo "<div class=\"searchResultItem\">";
-                echo "<p class=\"itemName\">" . $row["name"] . "</p>";
-                //display prices for sale items differently:
-                if($row["specialPrice"])
-                {
-                    echo "<p class=\"worsePrice\">$" . $row["price"] . "</p>";
-                    echo "<p class=\"betterPrice\">$" . $row["specialPrice"] . "</p>";
-                }
-                else
-                {
-                    echo "<p class=\"itemPrice\">$" . $row["price"] . "</p>";
-                }
-                
-                echo "<img class=\"itemImage\" src=\"images/" . $row["imgPath"] . "\">";
-                echo "</div>";
+                //this function is declared in itemDisplay.func.php
+                displayItem($row, $conn);
             }
             //free up result
             mysqli_free_result($result);

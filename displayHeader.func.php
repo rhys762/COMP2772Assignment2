@@ -24,6 +24,7 @@
             //do the check for login
             if(isset($_SESSION["loggedInUser"]))
             {
+
                 echo "<li><a href=\"logout.func.php\">Log Out of Account \"" . $_SESSION["loggedInUser"] . "\"</a></li>";
                 echo "<li><a href=\"checkout.php\">Checkout</a></li>";
             }

@@ -20,6 +20,8 @@
             if($_SESSION['unameTaken'] == 1)
             {
                 echo "<p id =\"unameTaken\">Username is already taken</p>";
+                //unset it so if the user navigate away and then comes back its not still there
+                unset($_SESSION['unameTaken']);
             }
         }
     ?>

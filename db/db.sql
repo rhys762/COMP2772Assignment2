@@ -20,9 +20,17 @@ CREATE TABLE Accounts(
     password varchar(40) NOT NULL
 );
 
+CREATE TABLE Cart(
+    accountName varchar(100) NOT NULL,
+    id int NOT NULL,
+    quantity int NOT NULL,
+    PRIMARY KEY (accountName, id)
+);
+
 CREATE user IF NOT EXISTS dbadmin@localhost;
 GRANT all privileges ON ProductsDB.Products TO dbadmin@localhost;
 GRANT all privileges ON ProductsDB.Accounts TO dbadmin@localhost;
+GRANT all privileges ON ProductsDB.Cart TO dbadmin@localhost;
 
 INSERT INTO Products (name, imgPath, price) VALUES('Red Apple', 'redApple.png', 10.5);
 INSERT INTO Products (name, imgPath, price) VALUES('Green Apple', 'greenApple.png', 22.7);
