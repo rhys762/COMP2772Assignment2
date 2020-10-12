@@ -17,7 +17,7 @@
         //connect to the database
         require_once "dbconn.inc.php";
 
-        require_once "itemDisplay.func.php";
+        require_once "displayItem.dec.php";
 
         $sqlquery = "SELECT * FROM `products` where specialPrice is not null";
         //send off the statement to sql

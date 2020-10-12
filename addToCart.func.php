@@ -23,21 +23,17 @@
         mysqli_stmt_prepare($statement, $sqlquery);
         mysqli_stmt_bind_param($statement, 'sii', htmlspecialchars($_SESSION["loggedInUser"]), htmlspecialchars($_GET["id"]), $_GET["quantity"]);
         
-        if(mysqli_stmt_execute($statement))
-        {
-            //close connection
-            mysqli_close($conn);
-            header("location: checkout.php");
-        }
-        else
-        {
-            echo "execute error";
-        }
-        
+        mysqli_stmt_execute($statement)
+
+        //close connection
+        mysqli_close($conn);
+
+        //redirect to checkout
+        header("location: checkout.php");
     }
     else
     {
-        echo "error";
+        echo "error, get values not set";
     }
 
 ?>

@@ -28,6 +28,8 @@
     if(usernameAlreadyExists($conn, $_POST["username"]))
     {//if the username already exists
         $_SESSION['unameTaken'] = 1;//glob for indicating taken uname
+        //close connection
+        mysqli_close($conn);
         header("location: createAccount.php");
     }
     else
@@ -42,9 +44,11 @@
         mysqli_stmt_bind_param($statement, 'ssss', htmlspecialchars($_POST["username"]), htmlspecialchars($_POST["firstname"]), htmlspecialchars($_POST["lastname"]), htmlspecialchars($_POST["password"]));
         mysqli_stmt_execute($statement);
 
+        //close connection
+        mysqli_close($conn);
         header("location: login.php");
     }
 
     //close connection
-    mysqli_close($conn);
+    //mysqli_close($conn);
 ?>

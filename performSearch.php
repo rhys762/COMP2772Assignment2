@@ -15,7 +15,7 @@
     //connect to the database
     require_once "dbconn.inc.php";
 
-    require_once "itemDisplay.func.php";
+    require_once "displayItem.dec.php";
 
     //check the search field was set
     if(isset($_POST["searchValue"]))

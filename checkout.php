@@ -17,7 +17,7 @@
     //display header
     require_once "displayHeader.func.php";
 
-    require_once "itemDisplay.func.php";
+    require_once "displayItem.dec.php";
 
     echo "<h3>Your Cart:</h3>";
     //connect to the database
