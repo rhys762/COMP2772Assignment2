@@ -23,7 +23,7 @@
         mysqli_stmt_prepare($statement, $sqlquery);
         mysqli_stmt_bind_param($statement, 'sii', htmlspecialchars($_SESSION["loggedInUser"]), htmlspecialchars($_GET["id"]), $_GET["quantity"]);
         
-        mysqli_stmt_execute($statement)
+        mysqli_stmt_execute($statement);
 
         //close connection
         mysqli_close($conn);
