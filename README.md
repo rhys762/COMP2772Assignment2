@@ -9,3 +9,5 @@ some conventions ive made up because i dont know anything about webdev or php
     no suffix is an actual page
 
 sidenote i think ive missed deleting sql results after retrieving them so hunting those down will be fun
+
+Aish
