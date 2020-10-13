@@ -8,6 +8,7 @@
     <meta name="description" content="This is a place to buy things :)">
     <meta name="author" content="Galadriel Group">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/script.js"></script>
 </head>
 
 <body>
@@ -34,9 +35,10 @@
         <label for="lastName">Family Name:</label><br>
         <input type="text" name="lastname" required><br>
         <label for="password">Password:</label><br>
-        <input type="text" name="password" required><br>
+        <input type="password" name="password" id= "password1" required><br>
         <label for="confirmPassword">Confirm Password:</label><br>
-        <input type="text" required><br>
-        <input type="submit" value="Create">
+        <input type="password" oninput="checkPassword();" id="password2" required>
+        <span id="PWerrorMsg" style="visibility: hidden;"> Passwords do not match!</span><br>
+        <input type="submit" id="accountSubmit" value="Create">
     </form>
 </body>
