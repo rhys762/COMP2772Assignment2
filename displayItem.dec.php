@@ -32,15 +32,17 @@
                 {
                         $quantity = getNumberOfItemsInCart($sqlProductsRow["id"], $conn);
                         
+                        echo "<form action=\"modifyCart.func.php\" method=\"get\">";
+                        echo "<input type=\"number\" name=\"quantity\" value=\"" . $quantity . "\">";
+                        echo "<input class=\"hidden\" name=\"id\" type=\"text\" value=\"" . $sqlProductsRow["id"] . "\">";
+                        echo "<input type=\"submit\" value=\"Modify Cart\">";
+                        echo "</form>";
+
                         if($quantity > 0)
                         {
                             echo "<p>";
                             echo $quantity;
                             echo " in cart</p>";
-                        }
-                        else
-                        {
-                            echo "<a href=\"addToCart.func.php?id=" . $sqlProductsRow["id"] . "&quantity=" . "1" . "\">Add To Cart</a>";
                         }
                 }
 

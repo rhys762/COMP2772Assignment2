@@ -91,3 +91,7 @@ body {
 #accountMade {
     color: green;
 }
+
+.hidden {
+    display: none;
+}
