@@ -11,3 +11,4 @@ some conventions ive made up because i dont know anything about webdev or php
 sidenote i think ive missed deleting sql results after retrieving them so hunting those down will be fun
 
 Aish
+test
