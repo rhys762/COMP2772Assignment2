@@ -11,18 +11,19 @@
         session_start();
         //include func
         require_once "getNumberOfItemsInCart.dec.php";
+        require_once "displayPrices.func.php";
 
         echo "<div class=\"searchResultItem\">";
                 echo "<p class=\"itemName\">" . $sqlProductsRow["name"] . "</p>";
                 //display prices for sale items differently:
                 if($sqlProductsRow["specialPrice"])
                 {
-                    echo "<p class=\"worsePrice\">$" . $sqlProductsRow["price"] . "</p>";
-                    echo "<p class=\"betterPrice\">$" . $sqlProductsRow["specialPrice"] . "</p>";
+                    echo "<p class=\"worsePrice\">" . displayPrice($sqlProductsRow["price"]) . "</p>";
+                    echo "<p class=\"betterPrice\">" . displayPrice($sqlProductsRow["specialPrice"]) . "</p>";
                 }
                 else
                 {
-                    echo "<p class=\"itemPrice\">$" . $sqlProductsRow["price"] . "</p>";
+                    echo "<p class=\"itemPrice\">" . displayPrice($sqlProductsRow["price"]) . "</p>";
                 }
                 
                 echo "<img class=\"itemImage\" src=\"images/" . $sqlProductsRow["imgPath"] . "\">";
