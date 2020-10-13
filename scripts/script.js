@@ -1,8 +1,11 @@
+/*
+    Used to check whether the password combination matches
+*/
+
 function checkPassword(){
+    //Get the password from each of the inputs
     var password1 = document.getElementById("password1").value;
     var password2 = document.getElementById("password2").value;
-
-    console.log(password1 + "  " + password2);
 
     if(password1 === password2){ //If the passwords match
         //Enable the submit button
