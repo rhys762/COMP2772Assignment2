@@ -7,8 +7,12 @@
 <div class="pageHeader">
     <h1>Halloween Companion Monsters</h1>
 
-    <div id="leftHeaderImage">
+    <div id="rightHeaderImage">
         <img id="pumpkin" src="images/Pumpkin.png" alt="Halloween Pumpkin" width="100" height="100">
+    </div>
+
+    <div id="leftHeaderImage">
+        <img id="spider" src="images/Spider.png" alt="Black Spider" width="100" height="100">
     </div>
 
     <form id="searchBar" action="performSearch.php" method="POST">

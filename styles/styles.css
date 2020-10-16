@@ -124,3 +124,9 @@ images
     right: 50px;
     top: 20px;
 }
+
+#spider {
+    position: absolute;
+    left: 50px;
+    top: 20px;
+}
