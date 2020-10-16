@@ -5,7 +5,7 @@
 -->
 
 <div class="pageHeader">
-    <h1>Halloween Monster Pets</h1>
+    <h1>Halloween Companion Monsters</h1>
 
     <form id="searchBar" action="performSearch.php" method="POST">
         <input type="text" name="searchValue" placeholder="Search for keywords..">
