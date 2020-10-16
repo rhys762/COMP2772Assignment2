@@ -7,6 +7,10 @@
 <div class="pageHeader">
     <h1>Halloween Companion Monsters</h1>
 
+    <div id="leftHeaderImage">
+        <img id="pumpkin" src="images/Pumpkin.png" alt="Halloween Pumpkin" width="100" height="100">
+    </div>
+
     <form id="searchBar" action="performSearch.php" method="POST">
         <input type="text" name="searchValue" placeholder="Search for keywords..">
         <input type="submit" value="">

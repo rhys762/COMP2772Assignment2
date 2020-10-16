@@ -114,3 +114,13 @@ body {
 .hidden {
     display: none;
 }
+
+/* 
+images 
+*/
+
+#pumpkin {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+}
