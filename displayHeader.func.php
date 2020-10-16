@@ -5,13 +5,14 @@
 -->
 
 <div class="pageHeader">
-    <h1>BuyThings.com</h1>
+    <h1>Halloween Monster Pets</h1>
 
     <form id="searchBar" action="performSearch.php" method="POST">
         <input type="text" name="searchValue" placeholder="Search for keywords..">
         <input type="submit" value="">
     </form>
 
+    <div class="centerList">
     <ul id="links">
         <li><a href="home.php">Home</a></li>
         <li><a href="specials.php">Specials</a></li>
@@ -35,4 +36,5 @@
             }
         ?>
     </ul>
+        </div>
 </div>
