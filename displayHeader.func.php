@@ -8,11 +8,11 @@
     <h1>Halloween Companion Monsters</h1>
 
     <div id="rightHeaderImage">
-        <img id="pumpkin" src="images/Pumpkin2.png" alt="Halloween Pumpkin" width="100" height="100">
+        <img id="pumpkin" src="images/header/Pumpkin2.png" alt="Halloween Pumpkin" width="100" height="100">
     </div>
 
     <div id="leftHeaderImage">
-        <img id="spider" src="images/SpiderString.png" alt="Black Spider" width="100" height="150">
+        <img id="spider" src="images/header/SpiderString.png" alt="Black Spider" width="100" height="150">
     </div>
 
     <div class="topnav">
