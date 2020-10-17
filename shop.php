@@ -1,5 +1,5 @@
 <!--
-    Home page for the site
+    Main shopping page
 -->
 
 <head>
@@ -18,7 +18,7 @@
     <!-- display hot items or something? -->
 
 
-<!-- <div class="gallery">
+<div class="gallery">
   <div class="one">
   <img id="vampire" src="images/products/Vampire.png" alt="Vampire">
   </div>
@@ -55,5 +55,5 @@
   <div class="twelve">
   <img id="headlessGhost" src="images/products/HeadlessGhost.png" alt="Headless Ghost">
   </div>
-</div> -->
+</div>
 </body>
