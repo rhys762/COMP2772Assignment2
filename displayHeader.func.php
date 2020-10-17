@@ -5,7 +5,7 @@
 -->
 
 <div class="pageHeader">
-    <h1>Halloween Companion Monsters</h1>
+    <h1>Halloween Monster Pets</h1>
 
     <div id="rightHeaderImage">
         <img id="pumpkin" src="images/header/Pumpkin2.png" alt="Halloween Pumpkin" width="100" height="100">
