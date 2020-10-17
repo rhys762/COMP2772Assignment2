@@ -1,134 +1,109 @@
-body {
-    margin: 0px;
-    font-family: Verdana, Geneva, sans-serif;
-}
-
-/*
-    Style rules for the header of the page
-*/
-
-.pageHeader {
-    width: 100%;
-    height: 175px;
-    background-color: #fc9003;
-    top: 0px;
-    left: 0px;
-    padding: 0px;
-    margin: 0px;
-}
-
-/*
-    for the main title
-*/
-.pageHeader h1 {
-    color: black;
-    text-align: center;
-    padding-top: 25px;
-    margin-bottom: 30px;
-    font-family: 'Creepster';
-    font-size: 70px;
-    font-weight: 100;
-}
+/* Misc */
 
 body {
-    height: 200%;
-}
-
-/*
-    search bar rules
-*/
-
-#searchBar {
-    position: absolute;
-    right: 15px;
-    top: 130px;
-}
-
-#searchBar input {
-    display: flex;
-    float: left;
-    height: 25px;
-}
-
-/*
-        search field
-*/
-#searchBar input[type="text"] {
-    width: 150px;
-}
-
-/*
-        search button
-*/
-#searchBar input[type="submit"] {
-    background-image: url("../icons/shittySearchIcon.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 25px;
-}
-
-.searchResultItem {
-    border: 1px solid black;
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    width: 20%;
-}
-
-#links {
-    list-style-type: none;
-    text-align: center;
-}
-
-#links li {
-    display: inline-block;
-}
-
-#links li a {
-    color: black;
-    text-decoration: none;
-    padding: 10px 25px;
-    background-color: #fc9003;
-}
-
-#links li a:hover {
-    background-color: black;
-    color: white;
-  }
-
-.worsePrice {
-    text-decoration: line-through;
-}
-
-.betterPrice {
-    color: red;
-}
-
-#unameTaken {
-    color: red;
-}
-
-#accountMade {
-    color: green;
+  margin: 0px;
+  font-family: Verdana, Geneva, sans-serif;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-/* 
-images 
-*/
+/* Header Background */
+
+.pageHeader {
+  width: 100%;
+  height: 175px;
+  background-color: #fc9003;
+  top: 0px;
+  left: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Main Heading */
+
+.pageHeader h1 {
+  color: black;
+  text-align: center;
+  padding-top: 25px;
+  margin-bottom: 30px;
+  font-family: "Creepster";
+  font-size: 70px;
+  font-weight: 100;
+}
+
+/* Top Navigation Bar */
+
+.topnav {
+  margin-top: -20px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.topnav li {
+  display: inline-block;
+}
+
+.topnav li a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 25px;
+  background-color: #fc9003;
+}
+
+.topnav li a:hover {
+  background-color: black;
+  color: white;
+}
+
+.topnav input[type="text"] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  background: #f5f5f5;
+  vertical-align: bottom;
+  color: black;
+}
+
+.topnav button {
+  background: #f5f5f5;
+  width: 33px;
+  height: 33px;
+  border: 0;
+}
+
+/* Specials */
+
+.worsePrice {
+  text-decoration: line-through;
+}
+
+.betterPrice {
+  color: red;
+}
+
+/* Account Creation */
+
+#unameTaken {
+  color: red;
+}
+
+#accountMade {
+  color: green;
+}
+
+/* Images */
 
 #pumpkin {
-    position: absolute;
-    right: 50px;
-    top: 20px;
+  position: absolute;
+  right: 70px;
+  top: 30px;
 }
 
 #spider {
-    position: absolute;
-    left: 50px;
-    top: 20px;
+  position: absolute;
+  left: 70px;
+  top: 0px;
 }

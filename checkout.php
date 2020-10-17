@@ -9,6 +9,7 @@
     <meta name="author" content="Galadriel Group">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Creepster'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
