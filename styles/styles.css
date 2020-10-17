@@ -76,24 +76,26 @@ body {
     width: 20%;
 }
 
-.centerList {
+#links {
+    list-style-type: none;
     text-align: center;
 }
 
-#links {
-    list-style: none;
-}
-
 #links li {
-    float: left;
-    display: inline;
-    margin-right: 25px;
+    display: inline-block;
 }
 
 #links li a {
     color: black;
     text-decoration: none;
+    padding: 10px 25px;
+    background-color: #fc9003;
 }
+
+#links li a:hover {
+    background-color: black;
+    color: white;
+  }
 
 .worsePrice {
     text-decoration: line-through;
