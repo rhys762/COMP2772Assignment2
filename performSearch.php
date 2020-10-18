@@ -32,7 +32,7 @@
         if($result=mysqli_query($conn, $sqlquery))
         {
             //now display, if any exist, matches to the regex
-            echo "<p>Showing " . mysqli_num_rows($result) . " result(s) for\"" . $_POST["searchValue"] . "\"</p>";
+            echo "<p>Showing " . mysqli_num_rows($result) . " result(s) for: " . $_POST["searchValue"] . "</p>";
             //iterate through the query result
             while($row = mysqli_fetch_assoc($result))
             {

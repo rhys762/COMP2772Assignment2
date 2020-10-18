@@ -22,14 +22,15 @@
         {
             if($_SESSION['unameTaken'] == 1)
             {
-                echo "<p id =\"unameTaken\">Username is already taken</p>";
+                echo "<div id=userTaken>" . "<p id =\"unameTaken\">Username is already taken</p>" . "</div>";
                 //unset it so if the user navigate away and then comes back its not still there
                 unset($_SESSION['unameTaken']);
             }
         }
     ?>
 
-    <form id="createNewAccountForm" action="createAccount.func.php" method="POST">
+<div class="signUpForm">
+    <form action="createAccount.func.php" method="POST">
         <label for="username">Username:</label><br>
         <input type="text" name="username" required><br>
         <label for="firstName">Given Name:</label><br>
@@ -39,8 +40,9 @@
         <label for="password">Password:</label><br>
         <input type="password" name="password" id= "password1" required><br>
         <label for="confirmPassword">Confirm Password:</label><br>
-        <input type="password" oninput="checkPassword();" id="password2" required>
+        <input type="password" oninput="checkPassword();" id="password2" required><br>
         <span id="PWerrorMsg" style="visibility: hidden;"> Passwords do not match!</span><br>
-        <input type="submit" id="accountSubmit" value="Create">
+        <input type="submit" id="accountSubmit" value="Create Account">
     </form>
+    </div>
 </body>

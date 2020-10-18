@@ -21,16 +21,17 @@
         {
             if($_SESSION['unameTaken'] == 0)
             {
-                echo "<p id =\"accountMade\">Success, please login below</p>";
+                echo "<div id=AccSuccess>" . "<p id =\"accountMade\">Acount creation successful, please login below.</p>" . "</div>";
             }
         }
     ?>
-
-    <form id="loginForm" action="login.func.php" method="POST">
+    <div class="loginForm">
+    <form action="login.func.php" method="POST">
         <label for="username">Username:</label><br>
         <input type="text" name="username" required><br>
         <label for="password">Password:</label><br>
         <input type="password" name="password" required><br>
         <input type="submit" value="Login">
     </form>
+    </div>
 </body>
