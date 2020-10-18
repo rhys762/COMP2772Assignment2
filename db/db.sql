@@ -32,6 +32,15 @@ GRANT all privileges ON ProductsDB.Products TO dbadmin@localhost;
 GRANT all privileges ON ProductsDB.Accounts TO dbadmin@localhost;
 GRANT all privileges ON ProductsDB.Cart TO dbadmin@localhost;
 
-INSERT INTO Products (name, imgPath, price) VALUES('Red Apple', 'redApple.png', 10.5);
-INSERT INTO Products (name, imgPath, price) VALUES('Green Apple', 'greenApple.png', 22.7);
-INSERT INTO Products (name, imgPath, price, specialPrice) VALUES('Bannana', 'bannana.png', 9.1, 3);
+INSERT INTO Products (name, imgPath, price) VALUES('Angel', 'Angel.png', 10.5);
+INSERT INTO Products (name, imgPath, price) VALUES('Devil', 'Devil.png', 22.7);
+INSERT INTO Products (name, imgPath, price, specialPrice) VALUES('Evil Pumpkin', 'EvilPumpkin.png', 9.1, 3);
+INSERT INTO Products (name, imgPath, price) VALUES('Frankenstein', 'Frankenstein.png', 10.5);
+INSERT INTO Products (name, imgPath, price) VALUES('Ghost', 'Ghost.png', 22.7);
+INSERT INTO Products (name, imgPath, price, specialPrice) VALUES('Headless Ghost', 'HeadlessGhost.png', 9.1, 3);
+INSERT INTO Products (name, imgPath, price) VALUES('Mummy', 'Mummy.png', 10.5);
+INSERT INTO Products (name, imgPath, price) VALUES('Nurse', 'Nurse.png', 22.7);
+INSERT INTO Products (name, imgPath, price, specialPrice) VALUES('Super Hero', 'SuperHero.png', 9.1, 3);
+INSERT INTO Products (name, imgPath, price) VALUES('Vampire', 'Vampire.png', 10.5);
+INSERT INTO Products (name, imgPath, price) VALUES('Witch', 'Witch.png', 22.7);
+INSERT INTO Products (name, imgPath, price, specialPrice) VALUES('Zombie', 'Zombie.png', 9.1, 3);

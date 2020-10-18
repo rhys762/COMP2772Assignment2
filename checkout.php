@@ -20,14 +20,20 @@
     require_once "displayHeader.func.php";
 
     require_once "displayItem.dec.php";
+    require_once "getNumberOfItemsInCart.dec.php";
 
     echo "<h3>Your Cart:</h3>";
     //connect to the database
     require_once "dbconn.inc.php";
 
+
+
     //need to get all items in the users cart:
     //use the following query
     $sqlquery = "SELECT * FROM `Products` where id in (SELECT id FROM `Cart` where accountName = \"" . $_SESSION["loggedInUser"] . "\");";
+
+    //store the running total
+    $runningTotal = 0;
 
     //send off the statement to sql
     if($result=mysqli_query($conn, $sqlquery))
@@ -37,6 +43,12 @@
         {
             //this function is declared in itemDisplay.func.php
             displayItem($row, $conn);
+
+            //active price is special price if it is set (ie the item is on special), otherwise its just price
+            $activePrice = ($row["specialPrice"]) ? $row["specialPrice"] : $row["price"];
+
+            //add to the total
+            $runningTotal += ($activePrice * getNumberOfItemsInCart($row["id"],$conn));
         }
         //free up result
         mysqli_free_result($result);
@@ -45,6 +57,10 @@
     {
         echo "sql error";
     }
+
+    echo "<p>Your total is $";
+    echo $runningTotal;
+    echo "<p>";
 
     //close connection
     mysqli_close($conn);
