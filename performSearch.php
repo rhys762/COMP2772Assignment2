@@ -34,6 +34,7 @@
             //now display, if any exist, matches to the regex
             echo "<p>Showing " . mysqli_num_rows($result) . " result(s) for\"" . $_POST["searchValue"] . "\"</p>";
             //iterate through the query result
+            echo "<div class='gridWrapper'>";
             while($row = mysqli_fetch_assoc($result))
             {
                 //this function is declared in itemDisplay.func.php
@@ -41,6 +42,7 @@
             }
             //free up result
             mysqli_free_result($result);
+            echo "</div>";
         }
         else
         {

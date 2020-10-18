@@ -38,6 +38,7 @@
     //send off the statement to sql
     if($result=mysqli_query($conn, $sqlquery))
     {
+        echo "<div class='gridWrapper'>";
         //iterate through the query result
         while($row = mysqli_fetch_assoc($result))
         {
@@ -52,6 +53,7 @@
         }
         //free up result
         mysqli_free_result($result);
+        echo "</div>";
     }
     else
     {

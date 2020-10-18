@@ -44,7 +44,6 @@
                             echo "<p>";
                             echo $quantity;
                             echo " in cart</p>";
-                            echo "<a href=\"addToCart.func.php?id=" . $sqlProductsRow["id"] . "&quantity=" . "1" . "\">Add To Cart</a>";
                         }
                 }
 
