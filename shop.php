@@ -55,4 +55,41 @@
             <p><img id="headlessGhost" src="images/products/HeadlessGhost.png" alt="Headless Ghost"></p>
         </div>
     </div>
+    <?php
+        //pull the header
+        require_once "displayHeader.func.php"; 
+        
+        //display all items in products:
+
+        //connect to the database
+        require_once "dbconn.inc.php";
+
+        //include function
+        require_once "displayItem.dec.php";
+
+        $sqlquery = "SELECT * FROM `products`" ;
+
+        //send off the statement to sql
+        if($result=mysqli_query($conn, $sqlquery))
+        {
+            echo "<div class='gridWrapper'>";
+            //iterate through the query result
+            while($row = mysqli_fetch_assoc($result))
+            {
+                //this function is declared in itemDisplay.func.php
+                displayItem($row, $conn);
+            }
+            //free up result
+            mysqli_free_result($result);
+            echo "</div>";
+        }
+        else
+        {
+            echo "sql error";
+        }
+
+        //close connection
+        mysqli_close($conn);
+    ?>
+
 </body>
