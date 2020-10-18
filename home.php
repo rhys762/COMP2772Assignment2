@@ -16,4 +16,12 @@
     <!-- pull the header -->
     <?php require_once "displayHeader.func.php"; ?>
     <!-- display hot items or something? -->
+
+    <div class="search">
+    <form action="performSearch.php" method="POST">
+        <input type="text" name="searchValue" placeholder="Search...">
+        <button type="submit" value="submit"><i class="material-icons">search</i></button>
+    </form>
+    </div>
+
 </body>
