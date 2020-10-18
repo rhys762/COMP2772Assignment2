@@ -18,8 +18,8 @@
     <div class="topnav">
         <ul id="links">
             <li><a href="shop.php">Shop</a></li>
-            <li><a href="aboutUs.php">Sale</a></li>
-            
+            <li><a href="aboutUs.php">About Us</a></li>
+
             <!--
             if we are logged in display cart or something otherwise display login
         -->
@@ -32,17 +32,19 @@
                 echo "<li><a href=\"logout.func.php\">Log Out of Account \"" . $_SESSION["loggedInUser"] . "\"</a></li>";
                 echo "<li><a href=\"checkout.php\">Checkout</a></li>";
             } else {
-                echo "<li><a href=\"createAccount.php\">Create Account</a></li>";
+                echo "<li><a href=\"createAccount.php\">Sign Up</a></li>";
                 echo "<li><a href=\"login.php\">Log In</a></li>";
             }
             ?>
-            <li>
-                <form id="searchBar" action="performSearch.php" method="POST">
-                    <input type="text" name="searchValue" placeholder="Search...">
-                    <button type="submit" value="submit"><i class="material-icons">search</i></button>
-                    </form>
-            </li>
         </ul>
     </div>
+
+    <div class="search">
+    <form action="performSearch.php" method="POST">
+        <input type="text" name="searchValue" placeholder="Search...">
+        <button type="submit" value="submit"><i class="material-icons">search</i></button>
+    </form>
+    </div>
+    
 </div>
 </div>
