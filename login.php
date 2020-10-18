@@ -22,6 +22,8 @@
             if($_SESSION['unameTaken'] == 0)
             {
                 echo "<div id=AccSuccess>" . "<p id =\"accountMade\">Acount creation successful, please login below.</p>" . "</div>";
+
+                unset($_SESSION['unameTaken']);
             }
         }
     ?>
