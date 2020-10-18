@@ -38,13 +38,5 @@
             ?>
         </ul>
     </div>
-
-    <div class="search">
-    <form action="performSearch.php" method="POST">
-        <input type="text" name="searchValue" placeholder="Search...">
-        <button type="submit" value="submit"><i class="material-icons">search</i></button>
-    </form>
-    </div>
-    
 </div>
 </div>
