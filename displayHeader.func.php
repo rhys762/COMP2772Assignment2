@@ -5,7 +5,7 @@
 -->
 
 <div class="pageHeader">
-    <h1>Halloween Monster Pets</h1>
+    <h1><a href="home.php">Halloween Monster Pets</a></h1>
 
     <div id="rightHeaderImage">
         <img id="pumpkin" src="images/header/Pumpkin2.png" alt="Halloween Pumpkin" width="100" height="100">
@@ -17,9 +17,8 @@
 
     <div class="topnav">
         <ul id="links">
-            <li><a href="home.php">Home</a></li>
             <li><a href="shop.php">Shop</a></li>
-            <li><a href="specials.php">Sale</a></li>
+            <li><a href="aboutUs.php">Sale</a></li>
             
             <!--
             if we are logged in display cart or something otherwise display login

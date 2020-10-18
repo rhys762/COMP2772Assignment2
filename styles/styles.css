@@ -33,6 +33,11 @@ body {
   font-weight: 100;
 }
 
+.pageHeader a, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
 /* Top Navigation Bar */
 
 .topnav {
