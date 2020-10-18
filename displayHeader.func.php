@@ -7,14 +7,6 @@
 <div class="pageHeader">
     <h1><a href="home.php">Halloween Monster Pets</a></h1>
 
-    <div id="rightHeaderImage">
-        <img id="pumpkin" src="images/header/Pumpkin2.png" alt="Halloween Pumpkin" width="100" height="100">
-    </div>
-
-    <div id="leftHeaderImage">
-        <img id="spider" src="images/header/SpiderString.png" alt="Black Spider" width="100" height="150">
-    </div>
-
     <div class="topnav">
         <ul id="links">
             <li><a href="shop.php">Shop</a></li>
@@ -38,5 +30,12 @@
             ?>
         </ul>
     </div>
-</div>
+
+    <div id="rightHeaderImage">
+        <img id="pumpkin" src="images/header/Pumpkin2.png" alt="Halloween Pumpkin" width="100" height="100">
+    </div>
+
+    <div id="leftHeaderImage">
+        <img id="spider" src="images/header/SpiderString.png" alt="Black Spider" width="100" height="150">
+    </div>
 </div>

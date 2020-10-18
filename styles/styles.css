@@ -40,22 +40,16 @@ body {
 
 /* Top Navigation Bar */
 
-.topnav {
-  display: table;
-  margin: 0 auto;
-}
-
 .topnav ul {
   list-style-type: none;
   text-align: center;
 }
 
-.topnav li {
-  display: inline;
-  float: left;
+.topnav ul li {
+  display: inline-block;
 }
 
-.topnav li a {
+.topnav ul li a {
   color: black;
   text-decoration: none;
   padding: 10px 25px;
