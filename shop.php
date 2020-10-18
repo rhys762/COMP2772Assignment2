@@ -17,7 +17,6 @@
     <?php require_once "displayHeader.func.php"; ?>
     <!-- display hot items or something? -->
 
-
     <div class="gallery">
         <div class="one">
             <p><img id="vampire" src="images/products/Vampire.png" alt="Vampire"></p>
