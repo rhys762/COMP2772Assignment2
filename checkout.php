@@ -20,7 +20,7 @@
     require_once "displayHeader.func.php";
 
     require_once "displayItem.dec.php";
-    require_once "getNumberOfItemsInCart.php";
+    require_once "getNumberOfItemsInCart.dec.php";
 
     echo "<h3>Your Cart:</h3>";
     //connect to the database
