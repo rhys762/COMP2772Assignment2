@@ -61,9 +61,14 @@
         echo "sql error";
     }
 
+    //Save running total in the user's session
+    $_SESSION["cart_total"] = $runningTotal;
+
     echo "<p>Your total is ";
     echo displayPrice($runningTotal);
     echo "<p>";
+
+    echo "<a href='checkout2.php'>Checkout</a>";
 
     //close connection
     mysqli_close($conn);
