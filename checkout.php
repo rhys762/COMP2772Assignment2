@@ -21,6 +21,7 @@
 
     require_once "displayItem.dec.php";
     require_once "getNumberOfItemsInCart.dec.php";
+    require_once "displayPrices.func.php";
 
     echo "<h3>Your Cart:</h3>";
     //connect to the database
@@ -60,8 +61,8 @@
         echo "sql error";
     }
 
-    echo "<p>Your total is $";
-    echo $runningTotal;
+    echo "<p>Your total is ";
+    echo displayPrice($runningTotal);
     echo "<p>";
 
     //close connection
