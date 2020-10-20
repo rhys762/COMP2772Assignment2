@@ -9,22 +9,21 @@
 
     <div class="topnav">
         <ul id="links">
-            <li><a href="shop.php">Shop</a></li>
-            <li><a href="aboutUs.php">About Us</a></li>
-
-            <!--
-            if we are logged in display cart or something otherwise display login
-        -->
+            <li><a href="shop.php">Shop</a></li
+            ><li><a href="aboutUs.php">About Us</a></li
             <?php
             //start session
             session_start();
             //do the check for login
             if (isset($_SESSION["loggedInUser"])) {
-
-                echo "<li><a href=\"logout.func.php\">Log Out of Account \"" . $_SESSION["loggedInUser"] . "\"</a></li>";
+                //golly gee, i seem to have missed a angled bracket here and there right?
+                //no
+                //its deliberate and its a hack because the buttons have to be flush and inline block is stupid
+                //got it here https://stackoverflow.com/questions/19038799/why-is-there-an-unexplainable-gap-between-these-inline-block-div-elements
+                echo "><li><a href=\"logout.func.php\">Log Out of Account \"" . $_SESSION["loggedInUser"] . "\"</a></li>";
                 echo "<li><a href=\"checkout.php\">Checkout</a></li>";
             } else {
-                echo "<li><a href=\"createAccount.php\">Sign Up</a></li>";
+                echo "><li><a href=\"createAccount.php\">Sign Up</a></li>";
                 echo "<li><a href=\"login.php\">Log In</a></li>";
             }
             ?>
