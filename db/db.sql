@@ -7,8 +7,9 @@ USE ProductsDB;
 
 CREATE TABLE Products(
     id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name varchar(100) NOT NULL,
-    imgPath varchar(100) NOT NULL,
+    name varchar(30) NOT NULL,
+    imgPath varchar(30) NOT NULL,
+    descr varchar(200) NOT NULL,
     price float NOT NULL,
     specialPrice float
 ) AUTO_INCREMENT = 1;
@@ -32,15 +33,15 @@ GRANT all privileges ON ProductsDB.Products TO dbadmin@localhost;
 GRANT all privileges ON ProductsDB.Accounts TO dbadmin@localhost;
 GRANT all privileges ON ProductsDB.Cart TO dbadmin@localhost;
 
-INSERT INTO Products (name, imgPath, price) VALUES('Angel', 'Angel.png', 10.5);
-INSERT INTO Products (name, imgPath, price) VALUES('Devil', 'Devil.png', 22.7);
-INSERT INTO Products (name, imgPath, price, specialPrice) VALUES('Evil Pumpkin', 'EvilPumpkin.png', 9.1, 3);
-INSERT INTO Products (name, imgPath, price) VALUES('Frankenstein', 'Frankenstein.png', 10.5);
-INSERT INTO Products (name, imgPath, price) VALUES('Ghost', 'Ghost.png', 22.7);
-INSERT INTO Products (name, imgPath, price, specialPrice) VALUES('Headless Ghost', 'HeadlessGhost.png', 9.1, 3);
-INSERT INTO Products (name, imgPath, price) VALUES('Mummy', 'Mummy.png', 10.5);
-INSERT INTO Products (name, imgPath, price) VALUES('Nurse', 'Nurse.png', 22.7);
-INSERT INTO Products (name, imgPath, price, specialPrice) VALUES('Super Hero', 'SuperHero.png', 9.1, 3);
-INSERT INTO Products (name, imgPath, price) VALUES('Vampire', 'Vampire.png', 10.5);
-INSERT INTO Products (name, imgPath, price) VALUES('Witch', 'Witch.png', 22.7);
-INSERT INTO Products (name, imgPath, price, specialPrice) VALUES('Zombie', 'Zombie.png', 9.1, 3);
+INSERT INTO Products (name, imgPath, descr, price) VALUES('Angel', 'Angel.png', 'bring out your pets angelic side with this sick getup', 10.5);
+INSERT INTO Products (name, imgPath, descr, price) VALUES('Devil', 'Devil.png', 'your pet has always been the pet-ification of evil, now they look the part', 22.7);
+INSERT INTO Products (name, imgPath, descr, price, specialPrice) VALUES('Evil Pumpkin','EvilPumpkin.png', 'idk', 9.1, 3);
+INSERT INTO Products (name, imgPath, descr, price) VALUES('Frankenstein', 'Frankenstein.png', 'idk', 10.5);
+INSERT INTO Products (name, imgPath, descr, price) VALUES('Ghost', 'Ghost.png', 'a fitting costume for a cat that knocks shit around in the night, like my room-mates cat. Harper your a little rat', 22.7);
+INSERT INTO Products (name, imgPath, descr, price, specialPrice) VALUES('Headless Ghost', 'HeadlessGhost.png', 'idk', 9.1, 3);
+INSERT INTO Products (name, imgPath, descr, price) VALUES('Mummy', 'Mummy.png', 'for those that fantasize about wrapping thier annoying pets in toilet paper', 10.5);
+INSERT INTO Products (name, imgPath, descr, price) VALUES('Nurse', 'Nurse.png', 'idk', 22.7);
+INSERT INTO Products (name, imgPath, descr, price, specialPrice) VALUES('Super Hero', 'SuperHero.png', 'idk', 9.1, 3);
+INSERT INTO Products (name, imgPath, descr, price) VALUES('Vampire', 'Vampire.png', 'idk', 10.5);
+INSERT INTO Products (name, imgPath, descr, price) VALUES('Witch', 'Witch.png', 'idk', 22.7);
+INSERT INTO Products (name, imgPath, descr, price, specialPrice) VALUES('Zombie', 'Zombie.png', 'your pugs sad little breathing problem is now a scary zombie growl', 9.1, 3);

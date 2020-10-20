@@ -27,6 +27,7 @@
                 }
                 
                 echo "<img class=\"itemImage\" src=\"images/products/" . $sqlProductsRow["imgPath"] . "\">";
+                echo "<p>description: " . $sqlProductsRow["descr"] . "</p>";
 
                 //if logged in then display a add to cart button if its not in cart, otherwise display how many in cart
                 if(isset($_SESSION["loggedInUser"]))
