@@ -26,7 +26,7 @@
         //include function
         require_once "displayItem.dec.php";
 
-        $sqlquery = "SELECT * FROM `products`" ;
+        $sqlquery = "SELECT * FROM `Products`" ;
 
         //send off the statement to sql
         if($result=mysqli_query($conn, $sqlquery))
