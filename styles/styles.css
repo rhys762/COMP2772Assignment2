@@ -213,22 +213,31 @@ body {
   width: fit-content;
 }
 
-.searchResultItem input[type="text"] {
-  padding: 15px;
-  font-size: 17px;
-  border: 1px solid black;
-  border-radius: 15px;
+.addToCart input[type="number"] {
+  padding: 5px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  vertical-align: bottom;
+  color: black;
+  width: 60px;
+  margin-right: 10px;
+}
+
+.addToCart input[type="submit"] {
+  padding: 5px;
+  border: 1px solid grey;
+  border-radius: 10px;
   vertical-align: bottom;
   color: black;
   width: 100px;
 }
 
-.searchResultItem input[type="text"]:hover, .searchResultItem input[type="submit"]:hover {
+.addToCart input[type="number"]:hover, .addToCart input[type="submit"]:hover {
   border: 1px solid #999999;
   box-shadow: 0 0 10px #999999;
 }
 
-.searchResultItem input[type="text"]:focus, .searchResultItem input[type="submit"]:focus {
+.addToCart input[type="number"]:focus, .addToCart input[type="submit"]:focus {
   outline: none !important;
   border: 1px solid black;
 }
