@@ -3,7 +3,7 @@
 -->
 
 <head>
-    <title>BuyThings.com Specials</title>
+    <title>HalloweenPetCostumes.com Sign In</title>
     <meta charset="UTF-8">
     <meta name="description" content="This is a place to buy things :)">
     <meta name="author" content="Galadriel Group">
@@ -21,7 +21,7 @@
         {
             if($_SESSION['unameTaken'] == 0)
             {
-                echo "<div id=AccSuccess>" . "<p id =\"accountMade\">Acount creation successful, please login below.</p>" . "</div>";
+                echo "<div id=accSuccess>" . "<p id =\"accountMade\">Acount creation successful, please login below.</p>" . "</div>";
 
                 unset($_SESSION['unameTaken']);
             }

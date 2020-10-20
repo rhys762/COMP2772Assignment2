@@ -21,7 +21,7 @@
                 //its deliberate and its a hack because the buttons have to be flush and inline block is stupid
                 //got it here https://stackoverflow.com/questions/19038799/why-is-there-an-unexplainable-gap-between-these-inline-block-div-elements
                 echo "><li><a href=\"logout.func.php\">Log Out of Account \"" . $_SESSION["loggedInUser"] . "\"</a></li>";
-                echo "<li><a href=\"checkout.php\">Checkout</a></li>";
+                echo "<li><a href=\"checkout.php\">Cart</a></li>";
             } else {
                 echo "><li><a href=\"createAccount.php\">Sign Up</a></li>";
                 echo "<li><a href=\"login.php\">Log In</a></li>";

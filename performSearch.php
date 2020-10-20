@@ -1,6 +1,6 @@
 
 <head>
-    <title>BuyThings.com Search Results</title>
+    <title>HalloweenPetCostumes.com Search Results</title>
     <meta charset="UTF-8">
     <meta name="description" content="This is a place to buy things :)">
     <meta name="author" content="Galadriel Group">
@@ -32,7 +32,7 @@
         if($result=mysqli_query($conn, $sqlquery))
         {
             //now display, if any exist, matches to the regex
-            echo "<p>Showing " . mysqli_num_rows($result) . " result(s) for: " . $_POST["searchValue"] . "</p>";
+            echo "<div id='searchResult'><p>Showing " . mysqli_num_rows($result) . " result(s) for: " . $_POST["searchValue"] . "</p></div>";
             //iterate through the query result
             echo "<div class='gridWrapper'>";
             while($row = mysqli_fetch_assoc($result))

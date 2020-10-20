@@ -3,7 +3,7 @@
 -->
 
 <head>
-    <title>BuyThings.com</title>
+    <title>HalloweenPetCostumes.com About Us</title>
     <meta charset="UTF-8">
     <meta name="description" content="This is a place to buy things :)">
     <meta name="author" content="Galadriel Group">
