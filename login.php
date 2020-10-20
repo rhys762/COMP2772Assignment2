@@ -3,7 +3,7 @@
 -->
 
 <head>
-    <title>HalloweenPetCostumes.com Sign In</title>
+    <title>Log In</title>
     <meta charset="UTF-8">
     <meta name="description" content="This is a place to buy things :)">
     <meta name="author" content="Galadriel Group">
