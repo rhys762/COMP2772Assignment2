@@ -5,7 +5,7 @@
 -->
 
 <div class="pageHeader">
-    <h1><a href="home.php">Halloween Monster Pets</a></h1>
+    <h1><a href="home.php">Halloween Pet Costumes</a></h1>
 
     <div class="topnav">
         <ul id="links">
