@@ -33,7 +33,8 @@ body {
   font-weight: 100;
 }
 
-.pageHeader a, a:visited {
+.pageHeader a,
+a:visited {
   text-decoration: none;
   color: black;
 }
@@ -75,8 +76,8 @@ body {
 .mainSearch input[type="text"] {
   padding: 15px;
   font-size: 17px;
-  border: 1px solid black;
-  border-radius: 15px;
+  border: 1px solid grey;
+  border-radius: 2px;
   vertical-align: bottom;
   color: black;
   width: 500px;
@@ -87,15 +88,18 @@ body {
   width: 52px;
   height: 52px;
   border: 1px solid grey;
-  border-radius: 15px;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
-.mainSearch input[type="text"]:hover, .mainSearch button:hover {
+.mainSearch input[type="text"]:hover,
+.mainSearch button:hover {
   border: 1px solid #999999;
   box-shadow: 0 0 10px #999999;
 }
 
-.mainSearch input[type="text"]:focus, .mainSearch button:focus {
+.mainSearch input[type="text"]:focus,
+.mainSearch button:focus {
   outline: none !important;
   border: 1px solid black;
 }
@@ -124,9 +128,8 @@ body {
   top: 0px;
 }
 
-  /* Log in and sign up input fields */
+/* Log in and sign up input fields */
 
-  
 .loginForm {
   display: block;
   padding: 100px 0;
@@ -139,7 +142,9 @@ body {
   text-align: center;
 }
 
-.loginForm input[type="text"], .loginForm input[type="password"], .signUpForm input[type="text"], 
+.loginForm input[type="text"],
+.loginForm input[type="password"],
+.signUpForm input[type="text"],
 .signUpForm input[type="password"] {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -152,7 +157,8 @@ body {
   text-align: center;
 }
 
-.loginForm input[type="submit"], .signUpForm input[type="submit"] {
+.loginForm input[type="submit"],
+.signUpForm input[type="submit"] {
   margin-top: 20px;
   padding: 14px;
   font-size: 17px;
@@ -163,20 +169,29 @@ body {
   text-align: center;
 }
 
-.loginForm input[type="text"]:hover, .loginForm input[type="password"]:hover, .loginForm input[type="submit"]:hover,
-.signUpForm input[type="text"]:hover, .signUpForm input[type="password"]:hover, .signUpForm input[type="submit"]:hover, 
+.loginForm input[type="text"]:hover,
+.loginForm input[type="password"]:hover,
+.loginForm input[type="submit"]:hover,
+.signUpForm input[type="text"]:hover,
+.signUpForm input[type="password"]:hover,
+.signUpForm input[type="submit"]:hover,
 .searchResultItem:hover {
   border: 1px solid #999999;
   box-shadow: 0 0 10px #999999;
 }
 
-.loginForm input[type="text"]:focus, .loginForm input[type="password"]:focus, .loginForm input[type="submit"]:focus,
-.signUpForm input[type="text"]:focus, .signUpForm input[type="password"]:focus, .signUpForm input[type="submit"]:focus {
+.loginForm input[type="text"]:focus,
+.loginForm input[type="password"]:focus,
+.loginForm input[type="submit"]:focus,
+.signUpForm input[type="text"]:focus,
+.signUpForm input[type="password"]:focus,
+.signUpForm input[type="submit"]:focus {
   outline: none !important;
   border: 1px solid black;
 }
 
-#AccSuccess, #userTaken {
+#AccSuccess,
+#userTaken {
   padding-top: 50px;
   margin-bottom: 0;
   text-align: center;
@@ -195,28 +210,30 @@ body {
   border: 1px solid #dedede;
   padding: 10px;
   margin: 1px;
-  height: 400px;
+  height: 425px;
   width: 250px;
 }
 
-.itemPrice  {
+.itemPrice {
   padding: 10px 25px;
-  color: white; 
+  color: white;
   border: none;
   margin: 0;
   background-color: #9d0ecc;
 }
 
-.searchResultItem p, .searchResultItem form, .searchResultItem form input {
+.searchResultItem p,
+.searchResultItem form,
+.searchResultItem form input {
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
 }
 
 .addToCart input[type="number"] {
-  padding: 5px;
+  padding: 10px;
   border: 1px solid grey;
-  border-radius: 10px;
+  border-radius: 2px;
   vertical-align: bottom;
   color: black;
   width: 60px;
@@ -224,22 +241,63 @@ body {
 }
 
 .addToCart input[type="submit"] {
-  padding: 5px;
+  padding: 10px;
   border: 1px solid grey;
-  border-radius: 10px;
+  border-radius: 2px;
   vertical-align: bottom;
   color: black;
   width: 100px;
+  cursor: pointer;
 }
 
-.addToCart input[type="number"]:hover, .addToCart input[type="submit"]:hover {
+.addToCart input[type="number"]:hover,
+.addToCart input[type="submit"]:hover {
   border: 1px solid #999999;
   box-shadow: 0 0 10px #999999;
 }
 
-.addToCart input[type="number"]:focus, .addToCart input[type="submit"]:focus {
+.addToCart input[type="number"]:focus,
+.addToCart input[type="submit"]:focus {
   outline: none !important;
   border: 1px solid black;
+}
+
+.dropdown {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.dropbtn {
+  background-color: #595959;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-align: center;
+}
+
+.dropdown-content p {
+  color: black;
+  padding: 6px 8px;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #383838;  
 }
 
 /*
@@ -256,16 +314,3 @@ body {
   margin-bottom: 75px;
   width: 75.5%;
 }
-
-/* Sale Prices */
-
-/* .betterPrice {
-  color: green;
-}
-
-.worsePrice {
-  color: red;
-  text-decoration: line-through;
-  display: inline-block;
-  margin-right: 10px;
-} */

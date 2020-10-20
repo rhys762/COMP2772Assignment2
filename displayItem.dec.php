@@ -16,22 +16,14 @@ function displayItem($sqlProductsRow, $conn)
     echo "<div class=\"searchResultItem\">";
     echo "<img class=\"itemImage\" src=\"images/products/" . $sqlProductsRow["imgPath"] . "\">";
     echo "<p class=\"itemName\">" . $sqlProductsRow["name"] . "</p>";
-    //display prices for sale items differently:
-
     echo "<p class=\"itemPrice\">" . displayPrice($sqlProductsRow["price"]) . "</p>";
 
-    // if($sqlProductsRow["specialPrice"])
-    // {
-
-    //     echo "<div class='specialPrice'><span class=\"worsePrice\">" . displayPrice($sqlProductsRow["price"]) . "</span>";
-    //     echo "<span class=\"betterPrice\">" . displayPrice($sqlProductsRow["specialPrice"]) . "</span></div>";
-    // }
-    // else
-    // {
-    //     echo "<p class=\"itemPrice\">" . displayPrice($sqlProductsRow["price"]) . "</p>";
-    // }
-
-    echo "<p>description: " . $sqlProductsRow["descr"] . "</p>";
+    echo "<div class='dropdown'>";
+    echo "<button class='dropbtn'>Product Information</button>";
+    echo "<div class='dropdown-content'>";
+    echo "<p>" . $sqlProductsRow["descr"] . "</p>";
+    echo "</div>";
+    echo "</div>";
 
     //if logged in then display a add to cart button if its not in cart, otherwise display how many in cart
     if (isset($_SESSION["loggedInUser"])) {
