@@ -29,15 +29,18 @@
     echo "</h3>";
 
     //Has the user saved their details?
-    $sql_prev = "SELECT address1 FROM `accounts` where accountName = \"" . $_SESSION["loggedInUser"] . "\";";
-
+    $sql_prev = "SELECT * FROM `accounts` where accountName = \"" . $_SESSION["loggedInUser"] . "\";";
     $query_prev = mysqli_query($conn, $sql_prev);
-    $count_prev =  mysqli_fetch_assoc($query_prev);
-    $count = $count_prev['count'];
+    $rows_prev =  mysqli_fetch_assoc($query_prev);
 
     //Show saved details, if there are any
-    if($count){
-        echo "<p>Use saved address?</p>";
+    if($rows_prev["address1"] != NULL){
+        echo "<p><a href='checkout3.php'>Use saved address?</a></p>";
+        echo $rows_prev["address1"] . "<br>";
+        echo $rows_prev["address2"] . "<br>";
+        echo $rows_prev["suburb"] . "<br>";
+        echo $rows_prev["stat"] . "<br>";
+        echo $rows_prev["postcode"] . "<br>";
     }
 
     //close connection
