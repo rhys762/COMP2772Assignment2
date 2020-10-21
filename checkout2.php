@@ -28,9 +28,46 @@
     echo displayPrice($_SESSION["cart_total"]);
     echo "</h3>";
 
-    echo "<a href='checkout2.php'>Checkout</a>";
+    //Has the user saved their details?
+    $sql_prev = "SELECT address1 FROM `accounts` where accountName = \"" . $_SESSION["loggedInUser"] . "\";";
+
+    $query_prev = mysqli_query($conn, $sql_prev);
+    $count_prev =  mysqli_fetch_assoc($query_prev);
+    $count = $count_prev['count'];
+
+    //Show saved details, if there are any
+    if($count){
+        echo "<p>Use saved address?</p>";
+    }
 
     //close connection
     mysqli_close($conn);
+
+    //Or, user enters new details
 ?>
+    <p>Enter New Address:</p>
+    <div class="addressForm">
+        <form action="saveAddress.func.php" method="POST">
+            <label for="address1">Address Line 1:</label><br>
+            <input type="text" name="address1" required><br>
+            <label for="firstName">Address Line 2:</label><br>
+            <input type="text" name="address2"><br>
+            <label for="suburb">Suburb:</label><br>
+            <input type="text" name="suburb" required><br>
+            <label for="stat">State:</label><br>
+            <select name="stat">
+                <option value="ACT">ACT</option>
+                <option value="NSW">NSW</option>
+                <option value="NT">NT</option>
+                <option value="Qld">Qld</option>
+                <option value="SA">SA</option>
+                <option value="Tas">Tas</option>
+                <option value="Vic">Vic</option>
+                <option value="WA">WA</option>
+            </select><br>
+            <label for="postcode">Postcode:</label><br>
+            <input type="text" name="postcode" pattern="[0-9]*" maxlength="4"><br>
+            <input type="submit" id="accountSubmit" value="Save Address">
+        </form>
+    </div>
 </body>
