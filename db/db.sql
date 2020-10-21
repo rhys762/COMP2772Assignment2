@@ -18,7 +18,12 @@ CREATE TABLE Accounts(
     accountName varchar(100) NOT NULL PRIMARY KEY,
     firstname varchar(40) NOT NULL,
     lastname varchar(40) NOT NULL,
-    password varchar(40) NOT NULL
+    password varchar(40) NOT NULL,
+    address1 varchar(100),
+    address2 varchar(100),
+    suburb varchar(100),
+    postcode int,
+    stat varchar(10)
 );
 
 CREATE TABLE Cart(
