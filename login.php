@@ -28,6 +28,7 @@
         }
     ?>
     <div class="loginForm">
+    <div class="loginHeading"><h3>LOG IN</h3></div><br><br><br>
     <form action="login.func.php" method="POST">
         <label for="username">Username:</label><br>
         <input type="text" name="username" required><br>

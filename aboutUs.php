@@ -16,4 +16,11 @@
     <!-- pull the header -->
     <?php require_once "displayHeader.func.php"; ?>
     <!-- display hot items or something? -->
+
+    <div class="aboutUs">
+        <p>Welcome to Halloween Pet Costumes, we are Australia's leading online pet costume supplier.</p>
+        <p>We've supplied thousands of happy customers with the highest quality products and best customer service since first establishing the business in 2000.</p>
+
+
+    </div>
 </body>

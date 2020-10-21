@@ -30,6 +30,7 @@
     ?>
 
 <div class="signUpForm">
+<div class="signUpHeading"><h3>SIGN UP</h3></div><br><br><br>
     <form action="createAccount.func.php" method="POST">
         <label for="username">Username:</label><br>
         <input type="text" name="username" required><br>
