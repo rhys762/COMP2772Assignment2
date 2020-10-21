@@ -34,12 +34,6 @@ function displayItem($sqlProductsRow, $conn)
         echo "<input class=\"hidden\" name=\"id\" type=\"text\" value=\"" . $sqlProductsRow["id"] . "\">";
         echo "<input type=\"submit\" value=\"Modify Cart\">";
         echo "</form></div>";
-
-        if ($quantity > 0) {
-            echo "<p>";
-            echo $quantity;
-            echo " in cart</p>";
-        }
     }
 
     echo "</div>";
