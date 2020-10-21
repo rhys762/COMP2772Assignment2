@@ -23,11 +23,10 @@
     require_once "getNumberOfItemsInCart.dec.php";
     require_once "displayPrices.func.php";
 
-    echo "<h3>Your Cart:</h3>";
+    echo "<div class='checkoutWrapper'>";
+
     //connect to the database
     require_once "dbconn.inc.php";
-
-
 
     //need to get all items in the users cart:
     //use the following query
@@ -39,7 +38,7 @@
     //send off the statement to sql
     if($result=mysqli_query($conn, $sqlquery))
     {
-        echo "<div class='gridWrapper'>";
+        echo "<div class='checkoutGrid'>";
         //iterate through the query result
         while($row = mysqli_fetch_assoc($result))
         {
@@ -53,7 +52,6 @@
             $runningTotal += ($activePrice * getNumberOfItemsInCart($row["id"],$conn));
         }
         //free up result
-        mysqli_free_result($result);
         echo "</div>";
     }
     else
@@ -61,9 +59,16 @@
         echo "sql error";
     }
 
-    echo "<p>Your total is ";
+    mysqli_free_result($result);
+    echo "<div class='orderSummary'>";
+    echo "<h3>ORDER SUMMARY:</h3>";
+    echo "<p> X Items ";
+    echo "<p>Total ";
     echo displayPrice($runningTotal);
-    echo "<p>";
+    echo "<p><br>";
+    echo "<button id='checkoutbtn'>Checkout</button>";
+
+    echo "</div>";
 
     //close connection
     mysqli_close($conn);

@@ -116,15 +116,15 @@ a:visited {
 
 /* Header Images */
 
-#pumpkin {
+#spider2  {
   position: absolute;
-  right: 70px;
-  top: 30px;
+  right: 100px;
+  top: 0px;
 }
 
 #spider {
   position: absolute;
-  left: 70px;
+  left: 100px;
   top: 0px;
 }
 
@@ -314,4 +314,36 @@ a:visited {
   margin-top: 75px;
   margin-bottom: 75px;
   width: 75.5%;
+}
+
+/* checkout grid layout */
+
+.checkoutWrapper {
+    width: 80%;
+    margin: 75px auto;
+    text-align: center;
+}
+
+.checkoutGrid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  float: left;
+  width: 57%;
+  margin-bottom: 75px;
+}
+
+.orderSummary {
+  float: right;
+  border: 1px solid #dedede;
+  padding: 50px;
+}
+
+#checkoutbtn {
+  background-color: #fc9003;
+  color: black;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  width: 200px;
 }

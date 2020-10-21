@@ -31,7 +31,7 @@
     </div>
 
     <div id="rightHeaderImage">
-        <img id="pumpkin" src="images/header/Pumpkin2.png" alt="Halloween Pumpkin" width="100" height="100">
+    <img id="spider2" src="images/header/SpiderString.png" alt="Black Spider" width="100" height="150">  
     </div>
 
     <div id="leftHeaderImage">
