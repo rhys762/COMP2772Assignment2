@@ -1,11 +1,7 @@
-<!--
-    this takes an object id as a parameter and a connection to the database (errors abound when the connection was made from the function \o/)
-    returns the number of such items in the current users cart
-
-    assumes there is actually a user logged in, UB if not probably
--->
-
 <?php
+    /*
+        takes a connection to db, returns the total number of items in the users cart
+    */
     function getTotalNumberInCart($conn)
     {
         //start session
