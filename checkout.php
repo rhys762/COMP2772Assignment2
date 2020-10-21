@@ -21,6 +21,7 @@
 
     require_once "displayItem.dec.php";
     require_once "getNumberOfItemsInCart.dec.php";
+    require_once "getTotalNumberInCart.dec.php";
     require_once "displayPrices.func.php";
 
     echo "<div class='checkoutWrapper'>";
@@ -60,13 +61,15 @@
     }
 
     //Save running total in the user's session
-    $_SESSION["cart_total"] = $runningTotal
+    $_SESSION["cart_total"] = $runningTotal;
 
   
     mysqli_free_result($result);
     echo "<div class='orderSummary'>";
     echo "<h3>ORDER SUMMARY:</h3>";
-    echo "<p> X Items ";
+    echo "<p> " ;
+    echo getTotalNumberInCart($conn);
+    echo " Items ";
     echo "<p>Total ";
 
     echo displayPrice($runningTotal);
