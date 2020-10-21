@@ -3,7 +3,7 @@
 -->
 
 <head>
-    <title>BuyThings.com</title>
+    <title>Shop</title>
     <meta charset="UTF-8">
     <meta name="description" content="This is a place to buy things :)">
     <meta name="author" content="Galadriel Group">
@@ -26,7 +26,7 @@
         //include function
         require_once "displayItem.dec.php";
 
-        $sqlquery = "SELECT * FROM `products`" ;
+        $sqlquery = "SELECT * FROM `Products`" ;
 
         //send off the statement to sql
         if($result=mysqli_query($conn, $sqlquery))

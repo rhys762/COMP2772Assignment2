@@ -3,7 +3,7 @@
 -->
 
 <head>
-    <title>BuyThings.com Specials</title>
+    <title>Create Account</title>
     <meta charset="UTF-8">
     <meta name="description" content="This is a place to buy things :)">
     <meta name="author" content="Galadriel Group">

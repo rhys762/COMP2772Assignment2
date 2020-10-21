@@ -33,7 +33,8 @@ body {
   font-weight: 100;
 }
 
-.pageHeader a, a:visited {
+.pageHeader a,
+a:visited {
   text-decoration: none;
   color: black;
 }
@@ -43,6 +44,7 @@ body {
 .topnav ul {
   list-style-type: none;
   text-align: center;
+  padding-left: 0;
 }
 
 .topnav ul li {
@@ -53,8 +55,8 @@ body {
   color: black;
   text-decoration: none;
   padding: 10px 25px;
-  margin: none;
   border: none;
+  margin: 0;
   background-color: #fc9003;
 }
 
@@ -74,8 +76,8 @@ body {
 .mainSearch input[type="text"] {
   padding: 15px;
   font-size: 17px;
-  border: 1px solid black;
-  border-radius: 15px;
+  border: 1px solid grey;
+  border-radius: 2px;
   vertical-align: bottom;
   color: black;
   width: 500px;
@@ -86,15 +88,18 @@ body {
   width: 52px;
   height: 52px;
   border: 1px solid grey;
-  border-radius: 15px;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
-.mainSearch input[type="text"]:hover, .mainSearch button:hover {
+.mainSearch input[type="text"]:hover,
+.mainSearch button:hover {
   border: 1px solid #999999;
   box-shadow: 0 0 10px #999999;
 }
 
-.mainSearch input[type="text"]:focus, .mainSearch button:focus {
+.mainSearch input[type="text"]:focus,
+.mainSearch button:focus {
   outline: none !important;
   border: 1px solid black;
 }
@@ -111,96 +116,20 @@ body {
 
 /* Header Images */
 
-#pumpkin {
+#spider2  {
   position: absolute;
-  right: 70px;
-  top: 30px;
+  right: 100px;
+  top: 0px;
 }
 
 #spider {
   position: absolute;
-  left: 70px;
+  left: 100px;
   top: 0px;
 }
 
-/* Product Grid */
+/* Log in and sign up input fields */
 
-.gallery {
-    margin-top: 75px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-row-gap: 100px;
-  }
-
-  #vampire, #ghost, #headlessGhost, #nurse, #superHero, #devil, #witch, 
-  #evilPumpkin, #angel, #frankenstein, #zombie, #mummy {
-      max-width: 250px;
-      max-height: 250px;
-  }
-
-  .product1 {
-    grid-column: 1 / 2;
-    grid-row: 1;
-  }
-
-  .product2 { 
-    grid-column: 2 / 3;
-    grid-row: 1;
-  }
-
-  .product3 {
-    grid-column: 3 / 4;
-    grid-row: 1;
-  }
-
-  .product4 {
-    grid-column: 4 / 5;
-    grid-row: 1;
-  }
-
-  .product5 {
-    grid-column: 1 / 2;
-    grid-row: 2;
-  }
-
-  .product6 {
-    grid-column: 2 / 3;
-    grid-row: 2;
-  }
-
-  .product7 {
-    grid-column: 3 / 4;
-    grid-row: 2;
-  }
-
-  .product8 { 
-    grid-column: 4 / 5;
-    grid-row: 2;
-  }
-
-  .product9 {
-    grid-column: 1 / 2;
-    grid-row: 3;
-  }
-
-  .product10 {
-    grid-column: 2 / 3;
-    grid-row: 3;
-  }
-
-  .product11 {
-    grid-column: 3 / 4;
-    grid-row: 3;
-  }
-
-  .product12 {
-    grid-column: 4 / 5;
-    grid-row: 3;
-  }
-
-  /* Log in and sign up input fields */
-
-  
 .loginForm {
   display: block;
   padding: 100px 0;
@@ -213,7 +142,9 @@ body {
   text-align: center;
 }
 
-.loginForm input[type="text"], .loginForm input[type="password"], .signUpForm input[type="text"], 
+.loginForm input[type="text"],
+.loginForm input[type="password"],
+.signUpForm input[type="text"],
 .signUpForm input[type="password"] {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -226,7 +157,8 @@ body {
   text-align: center;
 }
 
-.loginForm input[type="submit"], .signUpForm input[type="submit"] {
+.loginForm input[type="submit"],
+.signUpForm input[type="submit"] {
   margin-top: 20px;
   padding: 14px;
   font-size: 17px;
@@ -237,19 +169,30 @@ body {
   text-align: center;
 }
 
-.loginForm input[type="text"]:hover, .loginForm input[type="password"]:hover, .loginForm input[type="submit"]:hover,
-.signUpForm input[type="text"]:hover, .signUpForm input[type="password"]:hover, .signUpForm input[type="submit"]:hover {
+.loginForm input[type="text"]:hover,
+.loginForm input[type="password"]:hover,
+.loginForm input[type="submit"]:hover,
+.signUpForm input[type="text"]:hover,
+.signUpForm input[type="password"]:hover,
+.signUpForm input[type="submit"]:hover,
+.searchResultItem:hover {
   border: 1px solid #999999;
   box-shadow: 0 0 10px #999999;
 }
 
-.loginForm input[type="text"]:focus, .loginForm input[type="password"]:focus, .loginForm input[type="submit"]:focus,
-.signUpForm input[type="text"]:focus, .signUpForm input[type="password"]:focus, .signUpForm input[type="submit"]:focus {
+.loginForm input[type="text"]:focus,
+.loginForm input[type="password"]:focus,
+.loginForm input[type="submit"]:focus,
+.signUpForm input[type="text"]:focus,
+.signUpForm input[type="password"]:focus,
+.signUpForm input[type="submit"]:focus {
   outline: none !important;
   border: 1px solid black;
 }
 
-#AccSuccess, #userTaken {
+#accSuccess,
+#userTaken,
+#searchResult {
   padding-top: 50px;
   margin-bottom: 0;
   text-align: center;
@@ -259,47 +202,148 @@ body {
 */
 
 .searchResultItem img {
-  height: 100px;
-  width: auto;
+  height: 200px;
+  display: block;
+  margin: 20px auto;
 }
 
 .searchResultItem {
-  border: 1px solid black;
+  border: 1px solid #dedede;
   padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  height: 300px;
+  margin: 1px;
+  height: 425px;
   width: 250px;
 }
 
-.searchResultItem p, .searchResultItem form, .searchResultItem form input, .searchResultItem image {
+.itemPrice {
+  padding: 10px 25px;
+  color: white;
+  border: none;
+  margin: 0;
+  background-color: #9d0ecc;
+}
+
+.searchResultItem p,
+.searchResultItem form,
+.searchResultItem form input {
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
 }
 
+.addToCart input[type="number"] {
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 2px;
+  vertical-align: bottom;
+  color: black;
+  width: 60px;
+  margin-right: 10px;
+}
 
+.addToCart input[type="submit"] {
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 2px;
+  vertical-align: bottom;
+  color: black;
+  width: 100px;
+  cursor: pointer;
+}
+
+.addToCart input[type="number"]:hover,
+.addToCart input[type="submit"]:hover {
+  border: 1px solid #999999;
+  box-shadow: 0 0 10px #999999;
+}
+
+.addToCart input[type="number"]:focus,
+.addToCart input[type="submit"]:focus {
+  outline: none !important;
+  border: 1px solid black;
+}
+
+.dropdown {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.dropbtn {
+  background-color: #595959;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-align: center;
+}
+
+.dropdown-content p {
+  color: black;
+  padding: 6px 8px;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #383838;  
+}
 
 /*
   this is a wrapper, used so far only for displaying multiple products
 
 */
+
 .gridWrapper {
   display: grid;
-  grid-template-columns: auto auto auto;
-  width: 60%;
+  grid-template-columns: auto auto auto auto;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 60px;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  width: 75.5%;
 }
 
-.betterPrice {
-  color: green;
+/* checkout grid layout */
+
+.checkoutWrapper {
+    width: 80%;
+    margin: 75px auto;
+    text-align: center;
 }
 
-.worsePrice {
-  color: red;
-  text-decoration: line-through;
+.checkoutGrid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  float: left;
+  width: 57%;
+  margin-bottom: 75px;
+}
+
+.orderSummary {
+  float: right;
+  border: 1px solid #dedede;
+  padding: 50px;
+}
+
+#checkoutbtn {
+  background-color: #fc9003;
+  color: black;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  width: 200px;
 }

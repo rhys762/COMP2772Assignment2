@@ -3,7 +3,7 @@
 -->
 
 <head>
-    <title>BuyThings.com Checkout</title>
+    <title>Checkout</title>
     <meta charset="UTF-8">
     <meta name="description" content="This is a place to buy things :)">
     <meta name="author" content="Galadriel Group">
@@ -23,11 +23,10 @@
     require_once "getNumberOfItemsInCart.dec.php";
     require_once "displayPrices.func.php";
 
-    echo "<h3>Your Cart:</h3>";
+    echo "<div class='checkoutWrapper'>";
+
     //connect to the database
     require_once "dbconn.inc.php";
-
-
 
     //need to get all items in the users cart:
     //use the following query
@@ -39,7 +38,7 @@
     //send off the statement to sql
     if($result=mysqli_query($conn, $sqlquery))
     {
-        echo "<div class='gridWrapper'>";
+        echo "<div class='checkoutGrid'>";
         //iterate through the query result
         while($row = mysqli_fetch_assoc($result))
         {
@@ -53,7 +52,6 @@
             $runningTotal += ($activePrice * getNumberOfItemsInCart($row["id"],$conn));
         }
         //free up result
-        mysqli_free_result($result);
         echo "</div>";
     }
     else
@@ -62,11 +60,20 @@
     }
 
     //Save running total in the user's session
-    $_SESSION["cart_total"] = $runningTotal;
+    $_SESSION["cart_total"] = $runningTotal
 
-    echo "<p>Your total is ";
+  
+    mysqli_free_result($result);
+    echo "<div class='orderSummary'>";
+    echo "<h3>ORDER SUMMARY:</h3>";
+    echo "<p> X Items ";
+    echo "<p>Total ";
+
     echo displayPrice($runningTotal);
-    echo "<p>";
+    echo "<p><br>";
+    echo "<button id='checkoutbtn'>Checkout</button>";
+
+    echo "</div>";
 
     echo "<a href='checkout2.php'>Checkout</a>";
 
