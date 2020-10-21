@@ -132,7 +132,7 @@ a:visited {
 
 .signUpHeading,
 .loginHeading {
-  background-color: #9003fc;
+  background-color: #7c00db;
   color: white;
   padding: 12px 24px;
   font-size: 16px;
@@ -174,7 +174,18 @@ a:visited {
   text-align: center;
 }
 
-.loginForm input[type="submit"],
+.loginForm input[type="submit"] {
+  background-color: #595959;
+  color: white;
+  margin-top: 40px;
+  padding: 14px;
+  font-size: 17px;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 500px;
+  text-align: center;
+}
+
 .signUpForm input[type="submit"] {
   background-color: #595959;
   color: white;
@@ -238,7 +249,7 @@ a:visited {
   color: white;
   border: none;
   margin: 0;
-  background-color: #9003fc;
+  background-color: #7c00db;
 }
 
 .searchResultItem p,
@@ -372,5 +383,5 @@ a:visited {
   width: 60%;
   padding: 40px;
   text-align: center;
-  margin: 75px auto;
+  margin: 100px auto;
 }
