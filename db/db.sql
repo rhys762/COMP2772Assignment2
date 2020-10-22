@@ -37,7 +37,6 @@ GRANT all privileges ON ProductsDB.Products TO dbadmin@localhost;
 GRANT all privileges ON ProductsDB.Accounts TO dbadmin@localhost;
 GRANT all privileges ON ProductsDB.Cart TO dbadmin@localhost;
 
-<<<<<<< HEAD
 INSERT INTO Products (name, imgPath, descr, price) VALUES('Angel', 'Angel.png', 'Get an angel costume for your four-legged friend just in time for Halloween!', 10.5);
 INSERT INTO Products (name, imgPath, descr, price) VALUES('Devil', 'Devil.png', 'Get a devil costume for your four-legged friend just in time for Halloween!', 22.7);
 INSERT INTO Products (name, imgPath, descr, price, specialPrice) VALUES('Evil Pumpkin','EvilPumpkin.png', 'Get an evil pumpkin costume for your four-legged friend just in time for Halloween!', 9.1, 3);
@@ -50,17 +49,3 @@ INSERT INTO Products (name, imgPath, descr, price, specialPrice) VALUES('Super H
 INSERT INTO Products (name, imgPath, descr, price) VALUES('Vampire', 'Vampire.png', 'Get a vampire costume for your four-legged friend just in time for Halloween! ', 10.5);
 INSERT INTO Products (name, imgPath, descr, price) VALUES('Witch', 'Witch.png', 'Get a witch costume for your four-legged friend just in time for Halloween!', 22.7);
 INSERT INTO Products (name, imgPath, descr, price, specialPrice) VALUES('Zombie', 'Zombie.png', 'Get a zombie costume for your four-legged friend just in time for Halloween!', 9.1, 3);
-=======
-INSERT INTO Products (name, imgPath, descr, price) VALUES('Angel', 'Angel.png', 'bring out your pets angelic side with this sick getup', 10.5);
-INSERT INTO Products (name, imgPath, descr, price) VALUES('Devil', 'Devil.png', 'your pet has always been the pet-ification of evil, now they look the part', 22.7);
-INSERT INTO Products (name, imgPath, descr, price) VALUES('Evil Pumpkin','EvilPumpkin.png', 'idk', 9.1);
-INSERT INTO Products (name, imgPath, descr, price) VALUES('Frankenstein', 'Frankenstein.png', 'idk', 10.5);
-INSERT INTO Products (name, imgPath, descr, price) VALUES('Ghost', 'Ghost.png', 'a fitting costume for a cat that knocks shit around in the night, like my room-mates cat. Harper your a little rat', 22.7);
-INSERT INTO Products (name, imgPath, descr, price) VALUES('Headless Ghost', 'HeadlessGhost.png', 'idk', 9.1);
-INSERT INTO Products (name, imgPath, descr, price) VALUES('Mummy', 'Mummy.png', 'for those that fantasize about wrapping thier annoying pets in toilet paper', 10.5);
-INSERT INTO Products (name, imgPath, descr, price) VALUES('Nurse', 'Nurse.png', 'idk', 22.7);
-INSERT INTO Products (name, imgPath, descr, price) VALUES('Super Hero', 'SuperHero.png', 'idk', 9.1);
-INSERT INTO Products (name, imgPath, descr, price) VALUES('Vampire', 'Vampire.png', 'idk', 10.5);
-INSERT INTO Products (name, imgPath, descr, price) VALUES('Witch', 'Witch.png', 'idk', 22.7);
-INSERT INTO Products (name, imgPath, descr, price) VALUES('Zombie', 'Zombie.png', 'your pugs sad little breathing problem is now a scary zombie growl', 9.1);
->>>>>>> 0c724c3f37a6eced0b4c4aae4cfc1de303ab4115
