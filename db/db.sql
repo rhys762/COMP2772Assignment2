@@ -39,13 +39,13 @@ GRANT all privileges ON ProductsDB.Cart TO dbadmin@localhost;
 
 INSERT INTO Products (name, imgPath, descr, price) VALUES('Angel', 'Angel.png', 'Get an angel costume for your four-legged friend just in time for Halloween!', 10.5);
 INSERT INTO Products (name, imgPath, descr, price) VALUES('Devil', 'Devil.png', 'Get a devil costume for your four-legged friend just in time for Halloween!', 22.7);
-INSERT INTO Products (name, imgPath, descr, price, specialPrice) VALUES('Evil Pumpkin','EvilPumpkin.png', 'Get an evil pumpkin costume for your four-legged friend just in time for Halloween!', 9.1, 3);
+INSERT INTO Products (name, imgPath, descr, price) VALUES('Evil Pumpkin','EvilPumpkin.png', 'Get an evil pumpkin costume for your four-legged friend just in time for Halloween!', 9.1);
 INSERT INTO Products (name, imgPath, descr, price) VALUES('Frankenstein', 'Frankenstein.png', 'Get a Frankenstein costume for your four-legged friend just in time for Halloween!', 10.5);
 INSERT INTO Products (name, imgPath, descr, price) VALUES('Ghost', 'Ghost.png', 'Get a ghost costume for your four-legged friend just in time for Halloween!', 22.7);
-INSERT INTO Products (name, imgPath, descr, price, specialPrice) VALUES('Headless Ghost', 'HeadlessGhost.png', 'Get a headless ghost costume for your four-legged friend just in time for Halloween!', 9.1, 3);
+INSERT INTO Products (name, imgPath, descr, price) VALUES('Headless Ghost', 'HeadlessGhost.png', 'Get a headless ghost costume for your four-legged friend just in time for Halloween!', 9.1);
 INSERT INTO Products (name, imgPath, descr, price) VALUES('Mummy', 'Mummy.png', 'Get a mummy costume for your four-legged friend just in time for Halloween! ', 10.5);
 INSERT INTO Products (name, imgPath, descr, price) VALUES('Nurse', 'Nurse.png', 'Get a nurse costume for your four-legged friend just in time for Halloween!', 22.7);
-INSERT INTO Products (name, imgPath, descr, price, specialPrice) VALUES('Super Hero', 'SuperHero.png', 'Get a superhero costume for your four-legged friend just in time for Halloween!', 9.1, 3);
+INSERT INTO Products (name, imgPath, descr, price) VALUES('Super Hero', 'SuperHero.png', 'Get a superhero costume for your four-legged friend just in time for Halloween!', 9.1);
 INSERT INTO Products (name, imgPath, descr, price) VALUES('Vampire', 'Vampire.png', 'Get a vampire costume for your four-legged friend just in time for Halloween! ', 10.5);
 INSERT INTO Products (name, imgPath, descr, price) VALUES('Witch', 'Witch.png', 'Get a witch costume for your four-legged friend just in time for Halloween!', 22.7);
-INSERT INTO Products (name, imgPath, descr, price, specialPrice) VALUES('Zombie', 'Zombie.png', 'Get a zombie costume for your four-legged friend just in time for Halloween!', 9.1, 3);
+INSERT INTO Products (name, imgPath, descr, price) VALUES('Zombie', 'Zombie.png', 'Get a zombie costume for your four-legged friend just in time for Halloween!', 9.1);
