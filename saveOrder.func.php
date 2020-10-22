@@ -11,13 +11,9 @@
     session_start();
 
     //Get the next order ID    
-
-    //SELECT COUNT(DISTINCT orderid) as count FROM 'orders';
-
-    
-
+ 
     //How may ids are there
-    $countquery = mysqli_query($conn, "SELECT * FROM `orders` WHERE 1;");
+    $countquery = mysqli_query($conn, "SELECT COUNT(DISTINCT orderid) as count FROM 'orders';");
     $countrows = mysqli_fetch_assoc($countquery);
     $count = $countrows['count'];
 

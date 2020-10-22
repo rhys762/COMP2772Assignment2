@@ -45,6 +45,7 @@ CREATE user IF NOT EXISTS dbadmin@localhost;
 GRANT all privileges ON ProductsDB.Products TO dbadmin@localhost;
 GRANT all privileges ON ProductsDB.Accounts TO dbadmin@localhost;
 GRANT all privileges ON ProductsDB.Cart TO dbadmin@localhost;
+GRANT all privileges ON ProductsDB.Orders TO dbadmin@localhost;
 
 INSERT INTO Products (name, imgPath, descr, price) VALUES('Angel', 'Angel.png', 'Get an angel costume for your four-legged friend just in time for Halloween!', 10.5);
 INSERT INTO Products (name, imgPath, descr, price) VALUES('Devil', 'Devil.png', 'Get a devil costume for your four-legged friend just in time for Halloween!', 22.7);
