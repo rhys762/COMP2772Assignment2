@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-
 <?php
     //start the session
     session_start();
@@ -24,73 +23,23 @@
     //connect to the database
     require_once "dbconn.inc.php";
 
-    echo "<h3>Your total is ";
-    echo displayPrice($_SESSION["cart_total"]);
-    echo "</h3>";
-
-?>
-    <!-- Sorry I used a table... they probably suck, but it's so damn easy :/ -->
-    <table id="addressTable">
-        <tr>
-            <td id="prevAddress">
-                <?php
-                    //Has the user saved their details?
-                    $sql_prev = "SELECT * FROM `accounts` where accountName = \"" . $_SESSION["loggedInUser"] . "\";";
-                    $query_prev = mysqli_query($conn, $sql_prev);
-                    $rows_prev =  mysqli_fetch_assoc($query_prev);
-
-                    //Show saved details, if there are any
-                    if($rows_prev["address1"] != NULL){
-                        echo "<p><a href='checkout3.php'>Use saved address?</a></p>";
-                        echo $rows_prev["address1"] . "<br>";
-                        echo $rows_prev["address2"] . "<br>";
-                        echo $rows_prev["suburb"] . "<br>";
-                        echo $rows_prev["stat"] . "<br>";
-                        echo $rows_prev["postcode"] . "<br>";
-                    }
-
     //Has the user saved their details?
     $sql_prev = "SELECT * FROM `accounts` where accountName = \"" . $_SESSION["loggedInUser"] . "\";";
     $query_prev = mysqli_query($conn, $sql_prev);
     $rows_prev =  mysqli_fetch_assoc($query_prev);
 
-                    //close connection
-                    mysqli_close($conn);
+    //Show saved details, if there are any
+    if($rows_prev["address1"] != NULL){
+        echo "<p><a href='checkout3.php'>Use saved address?</a></p>";
+        echo $rows_prev["address1"] . "<br>";
+        echo $rows_prev["address2"] . "<br>";
+        echo $rows_prev["suburb"] . "<br>";
+        echo $rows_prev["stat"] . "<br>";
+        echo $rows_prev["postcode"] . "<br>";
+    }
 
-                    //Or, user enters new details
-                ?>
-            </td>
-
-
-            <td id="newAddress">
-                <p>Enter New Address:</p>
-                <div class="addressForm">
-                    <form action="saveAddress.func.php" method="POST">
-                        <label for="address1">Address Line 1:</label><br>
-                        <input type="text" name="address1" required><br>
-                        <label for="address2">Address Line 2:</label><br>
-                        <input type="text" name="address2"><br>
-                        <label for="suburb">Suburb:</label><br>
-                        <input type="text" name="suburb" required><br>
-                        <label for="stat">State:</label><br>
-                        <select name="stat">
-                            <option value="ACT">ACT</option>
-                            <option value="NSW">NSW</option>
-                            <option value="NT">NT</option>
-                            <option value="Qld">Qld</option>
-                            <option value="SA">SA</option>
-                            <option value="Tas">Tas</option>
-                            <option value="Vic">Vic</option>
-                            <option value="WA">WA</option>
-                        </select><br>
-                        <label for="postcode">Postcode:</label><br>
-                        <input type="text" name="postcode" pattern="[0-9]*" maxlength="4"><br>
-                        <input type="submit" id="accountSubmit" value="Save Address">
-                    </form>
-                </div>
-            </td>
-        </tr>
-    </table>
+    //close connection
+    mysqli_close($conn);
 
     //Or, user enters new details
 
@@ -131,5 +80,4 @@
 
     echo "</div>";
     ?>
-
 </body>
