@@ -14,6 +14,7 @@
     session_start();
 
     //Get the payment details entered
+    $type = $_POST["cardType"];
     $number=$_POST["cardNo"];
     $name = $_POST["cardName"];
     $cvv = $_POST["cvv"];
@@ -21,7 +22,7 @@
 
     //Check the card number - using Luhn algo
 
-    //Check its 16 digits
+    //Check its 8 - 19 digits
     if(strlen($number) != 16){ //Otherwise its invalid
         $_SESSION['cardWrong'] = 1; //Save in the browser
         header("location: checkout3.php"); //Send them back to try again
@@ -52,7 +53,7 @@
 
     //Since the card number looks to be valid:
     //Try and process payment
-    $payment = processPayment($number, $name, $cvv, $expiry);
+    $payment = processPayment($number, $name, $cvv, $expiry, $type);
     //If the payment was approved:
     if($payment == "00"){
         header("location: checkoutFinished.php"); //Send them to the final page
