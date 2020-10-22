@@ -22,7 +22,7 @@
         {
             if($_SESSION['unameTaken'] == 1)
             {
-                echo "<div id=userTaken>" . "<p id =\"unameTaken\">Username is already taken</p>" . "</div>";
+                echo "<div class=errorMsg>" . "<p class =\"errorText\">Username is already taken</p>" . "</div>";
                 //unset it so if the user navigate away and then comes back its not still there
                 unset($_SESSION['unameTaken']);
             }

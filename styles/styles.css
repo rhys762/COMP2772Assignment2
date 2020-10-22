@@ -106,7 +106,7 @@ a:visited {
 
 /* Account Creation */
 
-#unameTaken {
+.errorText {
   color: red;
 }
 
@@ -220,7 +220,7 @@ a:visited {
 }
 
 #accSuccess,
-#userTaken,
+.errorMsg,
 #searchResult {
   padding-top: 50px;
   margin-bottom: 0;
