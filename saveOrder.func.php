@@ -34,22 +34,15 @@
         {
             //add this item to the order
 
-            //create the query
-            //INSERT INTO orders (orderid, accountName, id, quantity, paymentID) VALUES (104,    "sam",  4,  7,  "1a2b3c4d");
-            //                                                                           orderid, accountName, id, quantity, paymentID
-
             //Prepare the sql statement
             $addquery = "INSERT INTO orders (orderid, accountName, id, quantity, paymentID) VALUES (" . $nextID . ",\"" . $_SESSION['loggedInUser'] ."\"," . $row['id'] ."," . $row['quantity'] .",\"" . $_SESSION['payID'] ."\");";
 
              //Init sql connection
             $statement = mysqli_stmt_init($conn);
 
-            echo $addquery;
            //Complete the statement
             mysqli_stmt_prepare($statement, $addquery);
             mysqli_stmt_execute($statement);
-
-            echo "added " . $row['quantity'] . " * " . $row['id'] . "<br>";
 
         }
     }
