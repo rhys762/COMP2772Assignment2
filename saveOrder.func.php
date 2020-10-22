@@ -54,6 +54,12 @@
         }
     }
 
+    //Clear the payment ID
+    unset($_SESSION['payID']);
+
+    //Send them to the final page
+    header("location: checkoutFinished.php");
+
 
 
 

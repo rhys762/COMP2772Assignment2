@@ -20,6 +20,12 @@
     //display header
     require_once "displayHeader.func.php";
 
+    //If they have a payment ID, the cart needs saving to an order
+    if(isset($_SESSION['payID'])){
+        //Redirect to the script
+        header("location: saveOrder.func.php");
+    }
+
     echo "<h1>Thanks for shopping with us!</h1>";
 
     echo"<h3><a href='home.php'> Click here to return to the home page </a></h3>";
