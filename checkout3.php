@@ -43,12 +43,22 @@
     echo $rows_prev["suburb"] . ", " . $rows_prev["stat"] . ", " . $rows_prev["postcode"];
     echo "</h3>";
 
+    if(isset($_SESSION['cardWrong']))
+        {
+            if($_SESSION['cardWrong'] == 1)
+            {
+                echo "<div class=errorMsg>" . "<p class =\"errorText\">Invalid card number. Please try again</p>" . "</div>";
+                //unset it so if the user navigate away and then comes back its not still there
+                unset($_SESSION['cardWrong']);
+            }
+        }
+
 
 ?>
     <p>Enter payment info:</p>
-    <form action="saveCard.func.php" method="POST">
+    <form action="paymentGo.func.php" method="POST">
         <label for="cardNo">Card Number:</label><br>
-        <input type="text" name="cardNo" required><br>
+        <input type="text" name="cardNo" pattern="[0-9]*" maxlength="16" required><br>
         <label for="cardName">Name on Card:</label><br>
         <input type="text" name="cardName"><br>
         <label for="cvv">CVV:</label><br>
