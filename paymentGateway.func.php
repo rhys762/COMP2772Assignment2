@@ -10,7 +10,10 @@
             return "01";
 
         } else {
-            //Otherwise, provide an APPROVED response
+            //Otherwise
+            //Store the payment ID
+            $_SESSION['payID'] = "a1b2c3d4";            
+            //provide an APPROVED response
             return 0;
         }
 
