@@ -42,4 +42,8 @@
         header("location: checkout3.php"); //Send them back to try again
     }
 
+    //Since the card number looks to be valid:
+    //Try and process payment
+    
+
 ?>

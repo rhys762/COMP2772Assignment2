@@ -43,15 +43,27 @@
     echo $rows_prev["suburb"] . ", " . $rows_prev["stat"] . ", " . $rows_prev["postcode"];
     echo "</h3>";
 
+    //Display a card validation error
     if(isset($_SESSION['cardWrong']))
+    {
+        if($_SESSION['cardWrong'] == 1)
         {
-            if($_SESSION['cardWrong'] == 1)
-            {
-                echo "<div class=errorMsg>" . "<p class =\"errorText\">Invalid card number. Please try again</p>" . "</div>";
-                //unset it so if the user navigate away and then comes back its not still there
-                unset($_SESSION['cardWrong']);
-            }
+            echo "<div class=errorMsg>" . "<p class =\"errorText\">Invalid card number. Please try again</p>" . "</div>";
+            //unset it so if the user navigate away and then comes back its not still there
+            unset($_SESSION['cardWrong']);
         }
+    }
+
+    //Display a card processing error
+    if(isset($_SESSION['badPay']))
+    {
+        if($_SESSION['badPay'] == 1)
+        {
+            echo "<div class=errorMsg>" . "<p class =\"errorText\">Payment declined. Please try again, or contact your bank</p>" . "</div>";
+            //unset it so if the user navigate away and then comes back its not still there
+            unset($_SESSION['badPay']);
+        }
+    }
 
 
 ?>
