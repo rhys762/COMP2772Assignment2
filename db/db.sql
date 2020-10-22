@@ -23,11 +23,7 @@ CREATE TABLE Accounts(
     address2 varchar(100),
     suburb varchar(100),
     postcode int,
-    stat varchar(10),
-    cardNo int(16),
-    cardname varchar(50),
-    cvv int(3),
-    expDate int(6)
+    stat varchar(10)
 );
 
 CREATE TABLE Cart(
