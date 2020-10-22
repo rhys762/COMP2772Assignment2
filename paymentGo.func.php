@@ -7,12 +7,19 @@
     //connect to the database
     require_once "dbconn.inc.php";
 
+    //connect to the demo payment gateway
+    require_once "paymentGateway.func.php";
+
     //Load the session variables
     session_start();
 
-    //Check the card number - using Luhn algo
-    // Get the card no entered
+    //Get the payment details entered
     $number=$_POST["cardNo"];
+    $name = $_POST["cardName"];
+    $cvv = $_POST["cvv"];
+    $expiry = $_POST["expiry"];
+
+    //Check the card number - using Luhn algo
 
     //Check its 16 digits
     if(strlen($number) != 16){ //Otherwise its invalid
@@ -40,10 +47,20 @@
     if($runningTotal % 10 !== 0){
         $_SESSION['cardWrong'] = 1; //Save in the browser
         header("location: checkout3.php"); //Send them back to try again
+        exit();
     }
 
     //Since the card number looks to be valid:
     //Try and process payment
-    
+    $payment = processPayment($number, $name, $cvv, $expiry);
+    //If the payment was approved:
+    if($payment == "00"){
+        header("location: checkoutFinished.php"); //Send them to the final page
+    } else { //Or, declined:
+        $_SESSION['payWrong'] = $payment; //Save in the browser
+        header("location: checkout3.php"); //Send them back to try again
+        exit();
+    }
+
 
 ?>

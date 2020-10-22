@@ -48,11 +48,32 @@
 
     echo "</div>";
 
+    if(isset($_SESSION['cardWrong']))
+    {
+        if($_SESSION['cardWrong'] == 1)
+        {
+            echo "<div class=errorMsg>" . "<p class =\"errorText\">Invalid card number. Please try again</p>" . "</div>";
+            //unset it so if the user navigate away and then comes back its not still there
+            unset($_SESSION['cardWrong']);
+        }
+    }
+
+    if(isset($_SESSION['payWrong']))
+    {
+        if($_SESSION['payWrong'] != 0)
+        {
+            echo "<div class=errorMsg>" . "<p class =\"errorText\">Payment error. Please try again (" . $_SESSION['payWrong'] .")</p></div>";
+            //unset it so if the user navigate away and then comes back its not still there
+            unset($_SESSION['payWrong']);
+        }
+    }
+
+
 ?>
 
 <div class="paymentForm">
     <div class="paymentHeading"><h3>Payment Details:</h3></div><br><br>
-    <form action="saveCard.func.php" method="POST">
+    <form action="paymentGo.func.php" method="POST">
         <label for="cardNo">Card Number:</label><br>
         <input type="text" name="cardNo" pattern="[0-9]*" maxlength="16" required><br>
         <label for="cardName">Name on Card:</label><br>
