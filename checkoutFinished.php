@@ -20,13 +20,10 @@
     //display header
     require_once "displayHeader.func.php";
 
-    require_once "displayPrices.func.php";
-
-    //connect to the database
-    require_once "dbconn.inc.php";
-
     echo "<h1>Thanks for shopping with us!</h1>";
 
     echo"<h3><a href='home.php'> Click here to return to the home page </a></h3>";
+
+    
 
 ?>

@@ -32,6 +32,15 @@ CREATE TABLE Cart(
     PRIMARY KEY (accountName, id)
 );
 
+CREATE TABLE Orders(
+    orderid int NOT NULL,
+    accountName varchar(100) NOT NULL,
+    id int NOT NULL,
+    quantity int NOT NULL,
+    paymentID varchar(8) NOT NULL,
+    PRIMARY KEY (orderid, accountName, id)
+);
+
 CREATE user IF NOT EXISTS dbadmin@localhost;
 GRANT all privileges ON ProductsDB.Products TO dbadmin@localhost;
 GRANT all privileges ON ProductsDB.Accounts TO dbadmin@localhost;
