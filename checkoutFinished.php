@@ -3,7 +3,7 @@
 -->
 
 <head>
-    <title>BuyThings.com Checkout</title>
+    <title>Checkout</title>
     <meta charset="UTF-8">
     <meta name="description" content="This is a place to buy things :)">
     <meta name="author" content="Galadriel Group">
@@ -25,7 +25,7 @@
     //connect to the database
     require_once "dbconn.inc.php";
 
-    echo "<h1> Thanks for shopping with us!</h1>";
+    echo "<h1>Thanks for shopping with us!</h1>";
 
     echo"<h3><a href='home.php'> Click here to return to the home page </a></h3>";
 

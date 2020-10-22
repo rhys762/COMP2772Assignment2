@@ -53,7 +53,7 @@
     echo "</div>";
     
     echo "<div class='addressForm'>";
-    echo "<div class='deliveryHeading'><p>Delivery Address:</p></div><br><br>";
+    echo "<div class='deliveryHeading'><h3>Delivery Address:</h3></div><br><br>";
     echo "<form action='saveAddress.func.php' method='POST'>";
     echo "<label for='address1'>Address Line 1:</label><br>";
     echo "<input type='text' name='address1' required><br>";

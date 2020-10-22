@@ -3,7 +3,7 @@
 -->
 
 <head>
-    <title>BuyThings.com Checkout</title>
+    <title>Checkout</title>
     <meta charset="UTF-8">
     <meta name="description" content="This is a place to buy things :)">
     <meta name="author" content="Galadriel Group">
@@ -25,6 +25,9 @@
     //connect to the database
     require_once "dbconn.inc.php";
 
+    echo "<div class='paymentWrapper'>";
+    echo "<div class='finalPrice'>";
+
     echo "<h3>Your total is ";
     echo displayPrice($_SESSION["cart_total"]);
     echo "</h3>";
@@ -43,9 +46,12 @@
     echo $rows_prev["suburb"] . ", " . $rows_prev["stat"] . ", " . $rows_prev["postcode"];
     echo "</h3>";
 
+    echo "</div>";
 
 ?>
-    <p>Enter payment info:</p>
+
+<div class="paymentForm">
+    <div class="paymentHeading"><h3>Payment Details:</h3></div><br><br>
     <form action="saveCard.func.php" method="POST">
         <label for="cardNo">Card Number:</label><br>
         <input type="text" name="cardNo" required><br>
@@ -57,4 +63,6 @@
         <input type="month" name="expDate" required><br>
         <input type="submit" id="accountSubmit" value="Checkout">
     </form>
+</div>
+</div>
 </body>

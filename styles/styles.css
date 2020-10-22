@@ -209,7 +209,11 @@ a:visited {
 .addToCart input[type="number"]:hover,
 .addToCart input[type="submit"]:hover,
 .addressForm input[type="text"]:hover,
-.addressForm input[type="submit"]:hover, select:hover {
+.addressForm input[type="submit"]:hover,
+select:hover,
+.paymentForm input[type="text"]:hover,
+.paymentForm input[type="month"]:hover,
+.paymentForm input[type="submit"]:hover {
   border: 1px solid #999999;
   box-shadow: 0 0 10px #999999;
 }
@@ -223,7 +227,11 @@ a:visited {
 .addToCart input[type="number"]:hover,
 .addToCart input[type="submit"]:hover,
 .addressForm input[type="text"]:focus,
-.addressForm input[type="submit"]:focus, select:focus {
+.addressForm input[type="submit"]:focus,
+select:focus,
+.paymentForm input[type="text"]:focus,
+.paymentForm input[type="month"]:focus,
+.paymentForm input[type="submit"]:focus {
   outline: none !important;
   border: 1px solid black;
 }
@@ -344,14 +352,14 @@ a:visited {
 
 /* checkout grid layout */
 
-.checkoutWrapper {
+.checkoutWrapper,
+.paymentWrapper {
   width: 80%;
   margin: 75px auto;
   text-align: center;
 }
 
 .addressWrapper {
-  /* height: 50%; */
   width: 75%;
   text-align: center;
   margin: 75px auto;
@@ -378,14 +386,18 @@ a:visited {
   width: 30%;
 }
 
-.addressForm {
+.addressForm,
+.paymentForm {
   float: left;
   width: 50%;
   border: 1px solid #dedede;
+  margin-bottom: 75px;
 }
 
 .addressForm input[type="text"],
-select {
+select,
+.paymentForm input[type="text"],
+.paymentForm input[type="month"] {
   margin-top: 10px;
   margin-bottom: 20px;
   padding: 14px;
@@ -397,7 +409,8 @@ select {
   text-align: center;
 }
 
-.addressForm input[type="submit"] {
+.addressForm input[type="submit"],
+.paymentForm input[type="submit"] {
   margin-top: 25px;
   margin-bottom: 20px;
   padding: 14px;
@@ -411,7 +424,8 @@ select {
   cursor: pointer;
 }
 
-.deliveryHeading {
+.deliveryHeading,
+.paymentHeading {
   background-color: #7c00db;
   color: white;
   padding: 12px 24px;
@@ -430,6 +444,8 @@ select {
   cursor: pointer;
   text-decoration: none;
 }
+
+/* checkout3 */
 
 .aboutUs {
   border: 1px solid #dedede;
