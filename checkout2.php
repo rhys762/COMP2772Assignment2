@@ -28,18 +28,20 @@
     $query_prev = mysqli_query($conn, $sql_prev);
     $rows_prev =  mysqli_fetch_assoc($query_prev);
 
-    //Show saved details, if there are any
-    if($rows_prev["address1"] != NULL){
-        echo "<p><a href='checkout3.php'>Use saved address?</a></p>";
-        echo $rows_prev["address1"] . "<br>";
-        echo $rows_prev["address2"] . "<br>";
-        echo $rows_prev["suburb"] . "<br>";
-        echo $rows_prev["stat"] . "<br>";
-        echo $rows_prev["postcode"] . "<br>";
-    }
+    // //Show saved details, if there are any
+    // if($rows_prev["address1"] != NULL){
+    //     echo "<div class='savedAddress'>";
+    //     echo "<p><a href='checkout3.php'>Use saved address?</a></p>";
+    //     echo $rows_prev["address1"] . ", ";
+    //     echo $rows_prev["address2"] . ", ";
+    //     echo $rows_prev["suburb"] . ", ";
+    //     echo $rows_prev["stat"] . ", ";
+    //     echo $rows_prev["postcode"] . ".";
+    //     echo "</div>";
+    // }
 
-    //close connection
-    mysqli_close($conn);
+    // //close connection
+    // mysqli_close($conn);
 
     //Or, user enters new details
 
@@ -53,7 +55,21 @@
     echo "</div>";
     
     echo "<div class='addressForm'>";
-    echo "<div class='deliveryHeading'><h3>Delivery Address:</h3></div><br><br>";
+    echo "<div class='deliveryHeading'><h3>Delivery Address:</h3></div><br>";
+
+       //Show saved details, if there are any
+       if($rows_prev["address1"] != NULL){
+        echo "<div class='savedAddress'>";
+        echo "<p><a href='checkout3.php'>Use saved address?</a>";
+        echo "   " . $rows_prev["address1"] . ", ";
+        echo $rows_prev["suburb"] . ", ";
+        echo $rows_prev["stat"] . ", ";
+        echo $rows_prev["postcode"] . ".";
+        echo "</p></div><br><br>";
+    }
+
+    mysqli_close($conn);
+
     echo "<form action='saveAddress.func.php' method='POST'>";
     echo "<label for='address1'>Address Line 1:</label><br>";
     echo "<input type='text' name='address1' required><br>";

@@ -447,6 +447,12 @@ select,
 
 /* checkout3 */
 
+.savedAddress {
+  border: 1px solid #dedede;
+  padding: 15px;
+  margin: 0 30px;
+}
+
 .aboutUs {
   border: 1px solid #dedede;
   display: block;
