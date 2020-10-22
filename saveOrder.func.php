@@ -13,7 +13,7 @@
     //Get the next order ID    
  
     //How may ids are there
-    $countquery = mysqli_query($conn, "SELECT COUNT(DISTINCT orderid) as count FROM 'orders';");
+    $countquery = mysqli_query($conn, "SELECT COUNT(DISTINCT orderid) as count FROM orders;");
     $countrows = mysqli_fetch_assoc($countquery);
     $count = $countrows['count'];
 
