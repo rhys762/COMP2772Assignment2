@@ -11,7 +11,6 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Creepster'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-
 <body>
 <?php
     //start the session
@@ -23,10 +22,6 @@
 
     //connect to the database
     require_once "dbconn.inc.php";
-
-    echo "<h3>Your total is ";
-    echo displayPrice($_SESSION["cart_total"]);
-    echo "</h3>";
 
     //Has the user saved their details?
     $sql_prev = "SELECT * FROM `accounts` where accountName = \"" . $_SESSION["loggedInUser"] . "\";";
@@ -47,30 +42,42 @@
     mysqli_close($conn);
 
     //Or, user enters new details
-?>
-    <p>Enter New Address:</p>
-    <div class="addressForm">
-        <form action="saveAddress.func.php" method="POST">
-            <label for="address1">Address Line 1:</label><br>
-            <input type="text" name="address1" required><br>
-            <label for="firstName">Address Line 2:</label><br>
-            <input type="text" name="address2"><br>
-            <label for="suburb">Suburb:</label><br>
-            <input type="text" name="suburb" required><br>
-            <label for="stat">State:</label><br>
-            <select name="stat">
-                <option value="ACT">ACT</option>
-                <option value="NSW">NSW</option>
-                <option value="NT">NT</option>
-                <option value="Qld">Qld</option>
-                <option value="SA">SA</option>
-                <option value="Tas">Tas</option>
-                <option value="Vic">Vic</option>
-                <option value="WA">WA</option>
-            </select><br>
-            <label for="postcode">Postcode:</label><br>
-            <input type="text" name="postcode" pattern="[0-9]*" maxlength="4"><br>
-            <input type="submit" id="accountSubmit" value="Save Address">
-        </form>
-    </div>
+
+    echo "<div class='addressWrapper'>";
+
+    echo "<div class='finalPrice'>";
+    echo "<h3>ORDER SUMMARY:</h3>";
+    echo "<p>Total ";
+    echo displayPrice($_SESSION["cart_total"]);
+    echo "</p>";
+    echo "</div>";
+    
+    echo "<div class='addressForm'>";
+    echo "<div class='deliveryHeading'><p>Delivery Address:</p></div><br><br>";
+    echo "<form action='saveAddress.func.php' method='POST'>";
+    echo "<label for='address1'>Address Line 1:</label><br>";
+    echo "<input type='text' name='address1' required><br>";
+    echo "<label for='firstName'>Address Line 2:</label><br>";
+    echo "<input type='text' name='address2'><br>";
+    echo "<label for='suburb'>Suburb:</label><br>";
+    echo "<input type='text' name='suburb' required><br>";
+    echo "<label for='stat'>State:</label><br>";
+    echo "<select name='stat'>";
+    echo "<option value='ACT'>ACT</option>";
+    echo "<option value='NSW'>NSW</option>";
+    echo "<option value='NT'>NT</option>";
+    echo "<option value='Qld'>Qld</option>";
+    echo "<option value='SA'>SA</option>";
+    echo "<option value='Tas'>Tas</option>";
+    echo "<option value='Vic'>Vic</option>";
+    echo "<option value='WA'>WA</option>";
+    echo "</select><br>";
+    echo "<label for='postcode'>Postcode:</label><br>";
+    echo "<input type='text' name='postcode' pattern='[0-9]*' maxlength='4'><br>";
+    echo "<input type='submit' id='accountSubmit' value='Save Address'>";
+    echo "</form>";
+    echo "</div>";
+
+    echo "</div>";
+    ?>
 </body>

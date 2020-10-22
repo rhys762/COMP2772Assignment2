@@ -137,7 +137,6 @@ a:visited {
   padding: 12px 24px;
   font-size: 16px;
   border: none;
-  cursor: pointer;
   margin: 0 12px;
 }
 
@@ -184,6 +183,7 @@ a:visited {
   border-radius: 15px;
   width: 500px;
   text-align: center;
+  cursor: pointer;
 }
 
 .signUpForm input[type="submit"] {
@@ -196,6 +196,7 @@ a:visited {
   border-radius: 15px;
   width: 500px;
   text-align: center;
+  cursor: pointer;
 }
 
 .loginForm input[type="text"]:hover,
@@ -204,7 +205,11 @@ a:visited {
 .signUpForm input[type="text"]:hover,
 .signUpForm input[type="password"]:hover,
 .signUpForm input[type="submit"]:hover,
-.searchResultItem:hover {
+.searchResultItem:hover,
+.addToCart input[type="number"]:hover,
+.addToCart input[type="submit"]:hover,
+.addressForm input[type="text"]:hover,
+.addressForm input[type="submit"]:hover, select:hover {
   border: 1px solid #999999;
   box-shadow: 0 0 10px #999999;
 }
@@ -214,7 +219,11 @@ a:visited {
 .loginForm input[type="submit"]:focus,
 .signUpForm input[type="text"]:focus,
 .signUpForm input[type="password"]:focus,
-.signUpForm input[type="submit"]:focus {
+.signUpForm input[type="submit"]:focus,
+.addToCart input[type="number"]:hover,
+.addToCart input[type="submit"]:hover,
+.addressForm input[type="text"]:focus,
+.addressForm input[type="submit"]:focus, select:focus {
   outline: none !important;
   border: 1px solid black;
 }
@@ -280,17 +289,17 @@ a:visited {
   cursor: pointer;
 }
 
-.addToCart input[type="number"]:hover,
+/* .addToCart input[type="number"]:hover,
 .addToCart input[type="submit"]:hover {
   border: 1px solid #999999;
   box-shadow: 0 0 10px #999999;
-}
+} */
 
-.addToCart input[type="number"]:focus,
+/* .addToCart input[type="number"]:focus,
 .addToCart input[type="submit"]:focus {
   outline: none !important;
   border: 1px solid black;
-}
+} */
 
 .dropdown {
   text-align: center;
@@ -353,6 +362,13 @@ a:visited {
   text-align: center;
 }
 
+.addressWrapper {
+  /* height: 50%; */
+  width: 75%;
+  text-align: center;
+  margin: 75px auto;
+}
+
 .checkoutGrid {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -367,14 +383,64 @@ a:visited {
   padding: 50px;
 }
 
-#checkoutbtn {
+.finalPrice {
+  float: right;
+  border: 1px solid #dedede;
+  padding: 50px;
+  width: 30%;
+}
+
+.addressForm {
+  float: left;
+  width: 50%;
+  border: 1px solid #dedede;
+}
+
+.addressForm input[type="text"],
+select {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 14px;
+  font-size: 17px;
+  border: 1px solid black;
+  border-radius: 15px;
+  color: black;
+  width: 500px;
+  text-align: center;
+}
+
+.addressForm input[type="submit"] {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  padding: 14px;
+  font-size: 17px;
+  border: 1px solid black;
+  border-radius: 15px;
+  color: white;
+  width: 500px;
+  text-align: center;
+  background-color: #595959;
+  cursor: pointer;
+}
+
+.deliveryHeading {
+  background-color: #7c00db;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  margin: 15px;
+}
+
+.checkoutBtn {
   background-color: #fc9003;
   color: black;
-  padding: 12px;
+  padding: 12px 50px;
   font-size: 18px;
+  margin-top: 25px;
   border: none;
   cursor: pointer;
-  width: 200px;
+  text-decoration: none;
 }
 
 .aboutUs {

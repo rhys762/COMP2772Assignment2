@@ -74,11 +74,9 @@
 
     echo displayPrice($runningTotal);
     echo "<p><br>";
-    echo "<button id='checkoutbtn'>Checkout</button>";
+    echo "<a class='checkoutBtn' href='checkout2.php'>Checkout</a>";
 
     echo "</div>";
-
-    echo "<a href='checkout2.php'>Checkout</a>";
 
     //close connection
     mysqli_close($conn);
