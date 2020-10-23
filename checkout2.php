@@ -28,21 +28,6 @@
     $query_prev = mysqli_query($conn, $sql_prev);
     $rows_prev =  mysqli_fetch_assoc($query_prev);
 
-    // //Show saved details, if there are any
-    // if($rows_prev["address1"] != NULL){
-    //     echo "<div class='savedAddress'>";
-    //     echo "<p><a href='checkout3.php'>Use saved address?</a></p>";
-    //     echo $rows_prev["address1"] . ", ";
-    //     echo $rows_prev["address2"] . ", ";
-    //     echo $rows_prev["suburb"] . ", ";
-    //     echo $rows_prev["stat"] . ", ";
-    //     echo $rows_prev["postcode"] . ".";
-    //     echo "</div>";
-    // }
-
-    // //close connection
-    // mysqli_close($conn);
-
     //Or, user enters new details
 
     echo "<div class='addressWrapper'>";
