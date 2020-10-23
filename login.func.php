@@ -38,7 +38,7 @@
         else
         {
             require_once "displayHeader.func.php";
-            echo "<p>I'm sorry but those credentials weren't correct, either create an account or try again through the login page</p>";
+            echo "<div id='loginError'><p>The information you have entered is either invalid or incorrect. Please try again.</p></div>";
         }
     }
     else

@@ -106,7 +106,7 @@ a:visited {
 
 /* Account Creation */
 
-.errorText {
+.errorText, #loginError p {
   color: red;
 }
 
@@ -255,12 +255,9 @@ select:focus,
   box-shadow: 0 0 10px #fc9003;
 }
 
-
-
-
 #accSuccess,
 .errorMsg,
-#searchResult {
+#searchResult, #loginError {
   padding-top: 50px;
   margin-bottom: 0;
   text-align: center;
