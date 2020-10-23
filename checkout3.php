@@ -74,6 +74,7 @@
 <div class="paymentForm">
     <div class="paymentHeading"><h3>Payment Details:</h3></div><br><br>
     <form action="paymentGo.func.php" method="POST">
+
         <input type="radio" class="cardType" id="visa" name="cardType" value="visa" required>
         <label for="visa"><img src="images/cards/visa.png" width="60"></label>
         <input type="radio" class="cardType" id="mastercard" name="cardType" value="mastercard">
@@ -82,6 +83,7 @@
         <label for="amex"><img src="images/cards/amex.png" width="60"></label>
         <input type="radio" class="cardType" id="eftpos" name="cardType" value="eftpos">
         <label for="eftpos"><img src="images/cards/eftpos.png" width="60"></label><br>
+
         <label for="cardNo">Card Number:</label><br>
         <input type="text" name="cardNo" pattern="[0-9]*" maxlength="19" required><br>
         <label for="cardName">Name on Card:</label><br>

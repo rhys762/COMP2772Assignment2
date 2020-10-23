@@ -64,4 +64,5 @@
     }
 
 
+    header("location: checkoutFinished.php");
 ?>
