@@ -52,7 +52,7 @@
 
 <div class="paymentForm">
     <div class="paymentHeading"><h3>Payment Details:</h3></div><br><br>
-    <form action="saveCard.func.php" method="POST">
+    <form action="paymentGo.func.php" method="POST">
         <label for="cardNo">Card Number:</label><br>
         <input type="text" name="cardNo" pattern="[0-9]*" maxlength="16" required><br>
         <label for="cardName">Name on Card:</label><br>

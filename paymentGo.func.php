@@ -46,4 +46,5 @@
     //Try and process payment
     
 
+    header("location: checkoutFinished.php");
 ?>
