@@ -483,3 +483,16 @@ select,
   text-align: center;
   margin: 100px auto;
 }
+
+.cardIcons {
+  margin-bottom: 30px;
+}
+
+.shopSuccess {
+  border: 1px solid #dedede;
+  display: block;
+  width: 60%;
+  padding: 40px;
+  text-align: center;
+  margin: 100px auto;
+}

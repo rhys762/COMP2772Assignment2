@@ -26,9 +26,11 @@
         header("location: saveOrder.func.php");
     }
 
+    echo "<div class='shopSuccess'>";
     echo "<h1>Thanks for shopping with us!</h1>";
 
-    echo"<h3><a href='home.php'> Click here to return to the home page </a></h3>";
+    echo "<h3><a href='home.php'> Click here to return to the home page </a></h3>";
+    echo "</div>";
 
     
 
