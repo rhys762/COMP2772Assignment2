@@ -50,6 +50,10 @@
     //Clear the payment ID
     unset($_SESSION['payID']);
 
+    //remove from cart
+    $sqlquery = "DELETE FROM `cart` WHERE `cart`.`accountName` = \"" . $_SESSION["loggedInUser"] . "\";";
+    mysqli_query($conn, $sqlquery);
+
     //Send them to the final page
     header("location: checkoutFinished.php");
 
